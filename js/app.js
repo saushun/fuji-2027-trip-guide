@@ -38,6 +38,37 @@
     return T.places.find((p) => p.id === id);
   }
 
+
+  function linkIcon(kind) {
+    if (kind === "official") return "🌐";
+    if (kind === "drive") return "📁";
+    return "🔗";
+  }
+
+  function renderLinksRow(links, opts = {}) {
+    if (!links || !links.length) return "";
+    const cls = opts.className || "place-links";
+    const items = links
+      .map(
+        (L) =>
+          `<a class="link-chip link-${L.kind || "ref"}" href="${L.url}" target="_blank" rel="noopener">${linkIcon(L.kind)} ${L.label}</a>`
+      )
+      .join("");
+    return `<div class="${cls}">${items}</div>`;
+  }
+
+  function renderLinksList(links) {
+    if (!links || !links.length) return "";
+    const items = links
+      .map(
+        (L) =>
+          `<li><a href="${L.url}" target="_blank" rel="noopener"><span class="link-kind">${linkIcon(L.kind)}</span> ${L.label}</a></li>`
+      )
+      .join("");
+    return `<div class="modal-section"><h3>參考連結</h3><ul class="modal-links">${items}</ul></div>`;
+  }
+
+
   /* —— Nav mobile —— */
   const toggle = $(".nav-toggle");
   const links = $(".nav-links");
@@ -82,6 +113,21 @@
 
   /* —— Lodging —— */
   const lodgeEl = $("#lodging-grid");
+  const lodgeFolder = T.meta && T.meta.lodgingDriveFolder;
+  if (lodgeFolder) {
+    const head = document.querySelector("#lodging .section-head p");
+    if (head && !document.getElementById("lodge-drive-folder")) {
+      const a = document.createElement("a");
+      a.id = "lodge-drive-folder";
+      a.className = "lodge-folder-link";
+      a.href = lodgeFolder;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.textContent = "📁 Drive 住宿資料夾";
+      head.appendChild(document.createTextNode(" "));
+      head.appendChild(a);
+    }
+  }
   if (lodgeEl) {
     T.lodging.forEach((l) => {
       let badge = "";
@@ -96,7 +142,8 @@
         <h3>${l.name}${badge}</h3>
         <div class="lodge-area">${l.area}${l.address ? " · " + l.address : ""}</div>
         <div class="lodge-confirm">${l.confirm}</div>
-        <p class="lodge-note">${l.note}</p>`;
+        <p class="lodge-note">${l.note}</p>
+        ${renderLinksRow(l.links, { className: "place-links lodge-links" })}`;
       lodgeEl.appendChild(card);
     });
   }
@@ -106,12 +153,17 @@
   if (infoEl) {
     const f = T.meta.flights;
     const c = T.meta.car;
+    const flightLinks = renderLinksRow((f && f.links) || [], { className: "place-links" });
+    const metaLinks = renderLinksRow((T.meta && T.meta.links) || [], { className: "place-links" });
+    const carPlace = placeById("nissan");
+    const carLinks = renderLinksRow((carPlace && carPlace.links) || [], { className: "place-links" });
     infoEl.innerHTML = `
       <div class="info-card reveal">
         <h3>✈️ 機票 HK Express</h3>
         <p>PNR <code>${f.out.pnr}</code></p>
         <p><strong>去程</strong> ${f.out.date} ${f.out.code}　${f.out.from} → ${f.out.to}</p>
         <p><strong>回程</strong> ${f.back.date} ${f.back.code}　${f.back.from} → ${f.back.to}</p>
+        ${flightLinks}
       </div>
       <div class="info-card reveal">
         <h3>🚗 租車 Nissan</h3>
@@ -120,7 +172,9 @@
         <p>${c.model}</p>
         <p>${c.pickup} → ${c.return}</p>
         <p style="font-size:0.8rem;opacity:0.85">${c.note}</p>
-      </div>`;
+        ${carLinks}
+      </div>
+      ${metaLinks ? `<div class="info-card reveal"><h3>📎 行程資料</h3>${metaLinks}</div>` : ""}`;
   }
 
   /* —— Leaflet map —— */
@@ -319,6 +373,7 @@
           <p class="place-card-hint">撳卡睇完整導覽 →</p>
           <p class="place-intro">${p.intro}</p>
           <div class="place-tips">💡 ${p.tips}</div>
+          ${renderLinksRow(p.links)}
           <div class="place-actions">
             <button type="button" class="btn btn-primary open-detail" data-place="${p.id}">完整導覽</button>
             <a class="btn" href="${gmapsUrl(p)}" target="_blank" rel="noopener">Google 地圖</a>
@@ -388,6 +443,7 @@
           <h3>實用提示</h3>
           <div class="modal-tips-box">💡 ${p.tips || ""}</div>
         </div>
+        ${renderLinksList(p.links)}
       </div>
       <div class="modal-actions">
         <a class="btn btn-primary" href="${gmapsUrl(p)}" target="_blank" rel="noopener">在 Google 地圖開啟</a>

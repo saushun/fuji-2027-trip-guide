@@ -11,11 +11,14 @@ window.TRIP = {
     days: 6,
     nights: 5,
     travelers: ["Sunny", "Helen"],
-    updated: "2026-10-27 22:55",
+    updated: "2026-10-27 23:10",
     note: "行程或會微調；出發前請再確認營業時間同路況。",
     flights: {
       out: { code: "UO646", pnr: "DBY9RQ", from: "HKG T2 13:00", to: "NRT T2 18:05", date: "13/2" },
-      back: { code: "UO647", pnr: "DBY9RQ", from: "NRT T2 19:00", to: "HKG T1 23:25", date: "18/2" }
+      back: { code: "UO647", pnr: "DBY9RQ", from: "NRT T2 19:00", to: "HKG T1 23:25", date: "18/2" },
+      links: [
+        { label: "HK Express 機票訂單", url: "https://docs.google.com/document/d/1pDtToB96FSDZ2yA46uEoksThJBO3VC-d5GN1W3HwmX8/edit?usp=drivesdk", kind: "drive" }
+      ]
     },
     car: {
       status: "booked",
@@ -25,7 +28,12 @@ window.TRIP = {
       pickup: "14/2 08:00 新宿",
       return: "17/2 ~19:00 新宿同店",
       note: "行程檔曾寫「報價中未訂」；記憶／確認號顯示已訂。要加租 ETC；滿油還車。"
-    }
+    },
+    lodgingDriveFolder: "https://drive.google.com/drive/folders/1pjdWHhVte7PSHph1FGT8-j9zwGA96lOs",
+    links: [
+      { label: "行程總表 Sheet", url: "https://docs.google.com/spreadsheets/d/1Og8UWVMYjbgMFVs8lWXhq1Pb7EJMF2UKjoeffMB3QVA/edit?usp=drivesdk", kind: "drive" },
+      { label: "東京資料夾", url: "https://drive.google.com/drive/folders/1DpG8G2hIfky8Yj9OHGNuH0YgMBu5I9TP", kind: "drive" }
+    ]
   },
 
   lodging: [
@@ -36,7 +44,11 @@ window.TRIP = {
       address: "西新宿 1-23-1",
       confirm: "3925-6530-8839",
       status: "booked",
-      note: "Double economy｜已預付 ¥27,060"
+      note: "Double economy｜已預付 ¥27,060",
+      links: [
+        { label: "13/2 確認電郵", url: "https://drive.google.com/file/d/1sFjozyQphNJpFBN3bpKjkjjNdFR1-nvZ/view?usp=drivesdk", kind: "drive" },
+        { label: "13/2 訂房 PDF", url: "https://drive.google.com/file/d/1J0EUN80cxSsRonTvSYPzKUkbXswWJeNZ/view?usp=drivesdk", kind: "drive" },
+      ]
     },
     {
       night: "14/2",
@@ -44,7 +56,10 @@ window.TRIP = {
       area: "河口湖",
       confirm: "Rakuten 21315092992312",
       status: "booked",
-      note: "和室・湖景＋富士山景露台｜CI 15:00｜CO 15/2 11:00｜入湯稅 ¥150 現場付"
+      note: "和室・湖景＋富士山景露台｜CI 15:00｜CO 15/2 11:00｜入湯稅 ¥150 現場付",
+      links: [
+        { label: "訂房確認 PDF", url: "https://drive.google.com/file/d/1eCnZ7Y_xqtPfgN7nw5oBbeQsri59m1Tk/view?usp=drivesdk", kind: "drive" },
+      ]
     },
     {
       night: "15/2（計劃）",
@@ -53,7 +68,10 @@ window.TRIP = {
       address: "1210-3 Saiko",
       confirm: "HM5WBB3CJB",
       status: "booked-planned-shorten",
-      note: "現訂 CO 17/2 10:00｜計劃縮短至 15→16 一晚（待改訂／未改訂）｜免費取消至 2027-02-10 15:00 JST"
+      note: "現訂 CO 17/2 10:00｜計劃縮短至 15→16 一晚（待改訂／未改訂）｜免費取消至 2027-02-10 15:00 JST",
+      links: [
+        { label: "訂房確認 PDF", url: "https://drive.google.com/file/d/13B6BjRRF4Mo2MKSi72n-S2CibGWG0Qwj/view?usp=drivesdk", kind: "drive" },
+      ]
     },
     {
       night: "16/2",
@@ -69,7 +87,10 @@ window.TRIP = {
       area: "西新宿",
       confirm: "Rakuten RYa0nktyza",
       status: "booked",
-      note: "Double Economy 早割60 素泊｜CI 18:00 起｜CO 18/2｜已付 ¥21,208｜電話 03-3346-2561"
+      note: "Double Economy 早割60 素泊｜CI 18:00 起｜CO 18/2｜已付 ¥21,208｜電話 03-3346-2561",
+      links: [
+        { label: "17/2 確認 Doc", url: "https://docs.google.com/document/d/1nQTBtZlkEoAQZerjEv4ryv3AbwZKnYrSOmqqknDFfrg/edit?usp=drivesdk", kind: "drive" },
+      ]
     }
   ],
 
@@ -90,7 +111,11 @@ window.TRIP = {
       origin: "選址喺千葉縣成田市一帶，遠離市中心但有專用鐵道（N'EX、京成）連接東京主要車站。",
       stories: "冬天傍晚抵達成田，出關後第一件事通常係確認下一程交通時間——特別係回程 bag drop 有硬 deadline，預留充足 buffer 最穩陣。",
       highlights: ["T2 抵達成／出發", "JR N'EX 或京成入新宿", "回程目標 16:00–17:00 到機場"],
-      mapsQuery: "Narita International Airport Terminal 2"
+      mapsQuery: "Narita International Airport Terminal 2",
+      links: [
+        { label: "官方網站", url: "https://www.narita-airport.jp/", kind: "official" },
+        { label: "HK Express 機票訂單", url: "https://docs.google.com/document/d/1pDtToB96FSDZ2yA46uEoksThJBO3VC-d5GN1W3HwmX8/edit?usp=drivesdk", kind: "drive" },
+      ]
     },
     {
       id: "kadoya",
@@ -108,7 +133,13 @@ window.TRIP = {
       origin: "選西新宿住，係為咗就近取／還 Nissan 同方便出入機場鐵道。",
       stories: "17/2 check-in 由 18:00 起——如果還車後稍遲，提前打電話通知酒店最安心。",
       highlights: ["西新宿實用位置", "13/2 同 17/2 兩晚", "近車站同晚飯選擇"],
-      mapsQuery: "Kadoya Hotel Shinjuku"
+      mapsQuery: "Kadoya Hotel Shinjuku",
+      links: [
+        { label: "官方網站", url: "https://www.kadoya-hotel.co.jp/", kind: "official" },
+        { label: "13/2 確認電郵", url: "https://drive.google.com/file/d/1sFjozyQphNJpFBN3bpKjkjjNdFR1-nvZ/view?usp=drivesdk", kind: "drive" },
+        { label: "13/2 訂房 PDF", url: "https://drive.google.com/file/d/1J0EUN80cxSsRonTvSYPzKUkbXswWJeNZ/view?usp=drivesdk", kind: "drive" },
+        { label: "17/2 確認 Doc", url: "https://docs.google.com/document/d/1nQTBtZlkEoAQZerjEv4ryv3AbwZKnYrSOmqqknDFfrg/edit?usp=drivesdk", kind: "drive" },
+      ]
     },
     {
       id: "nissan",
@@ -126,7 +157,10 @@ window.TRIP = {
       origin: "選西口店係因為住西新宿、朝早取車快，返程傍晚還車後又可步行返 Kadoya。",
       stories: "冬日中央道八王子附近朝早較順；雪胎同 ETC 唔好漏。滿油還車係合約基本要求。",
       highlights: ["確認號 26101305986", "Kicks e-POWER 四驅＋雪胎", "必加 ETC｜滿油還車"],
-      mapsQuery: "日産レンタカー 新宿駅西口"
+      mapsQuery: "日産レンタカー 新宿駅西口",
+      links: [
+        { label: "官方網站", url: "https://nissan-rentacar.com/shops/3FDY1", kind: "official" },
+      ]
     },
     {
       id: "fabcafe",
@@ -144,7 +178,10 @@ window.TRIP = {
       origin: "本町通本身係富士吉田舊市區主幹，望遠可見富士山——FabCafe 揀呢度，係想畀旅客喺上山前感受小鎮節奏。",
       stories: "網上營業時間有時同官方 PORTA 唔一致（早餐可能只去到 10:00），出發前務必再確認；星期二休。",
       highlights: ["本町通設計感 café", "早餐碟約 ¥1,300", "2 個免費泊位｜後備 sai Breakfast"],
-      mapsQuery: "FabCafe Fuji Fujiyoshida"
+      mapsQuery: "FabCafe Fuji Fujiyoshida",
+      links: [
+        { label: "官方網站", url: "https://fabcafe.com/jp/fuji/", kind: "official" },
+      ]
     },
     {
       id: "chureito",
@@ -162,7 +199,10 @@ window.TRIP = {
       origin: "新倉山自古係淺間信仰聖地；山腳有新倉富士淺間神社，祭木花開耶姬。選喺山腹建慰霊塔，係希望戰歿者望住故鄉象徵——富士山。",
       stories: "最初曾考慮建喺小舟山，後因地質軟弱改到現址；若當年起喺小舟山，可能同後來中央道走線衝突。塔本身唔係入內參觀重點，重點係景觀平台同約 398 級石階（通稱「咲耶姫の階段」）。",
       highlights: ["398 級石階慢慢爬", "五重塔＋富士同框", "冬天防滑鞋｜早到人少"],
-      mapsQuery: "Chureito Pagoda Arakurayama"
+      mapsQuery: "Chureito Pagoda Arakurayama",
+      links: [
+        { label: "觀光資訊", url: "https://fujiyoshida.net/spot/12", kind: "ref" },
+      ]
     },
     {
       id: "hoto",
@@ -180,7 +220,10 @@ window.TRIP = {
       origin: "山梨內陸冬冷，需要高熱量熱湯麵；南瓜同味噌嘅組合成為地方味道標記。",
       stories: "午餐檔易等位，船津店地址 6931。唔使當打卡名勝——重點係暖笠笠食完再上路。",
       highlights: ["山梨靈魂麵食ほうとう", "木造店望富士", "午餐約 12:00｜留意等位"],
-      mapsQuery: "ほうとう蔵 歩成 河口湖"
+      mapsQuery: "ほうとう蔵 歩成 河口湖",
+      links: [
+        { label: "官方網站", url: "https://www.funari.jp/shop/kawaguchiko_yamanakako", kind: "official" },
+      ]
     },
     {
       id: "shokupan",
@@ -198,7 +241,10 @@ window.TRIP = {
       origin: "選喺船津／河口湖站商圈，方便遊客順路帶走。",
       stories: "賣完即止、星期四休——若為 15/2 早餐預留，最好 round 到就買，唔好留到太晏。",
       highlights: ["富士山形食パン", "11:00–18:00 賣完即止", "星期四休｜約 4 泊位"],
-      mapsQuery: "FUJISAN SHOKUPAN 河口湖"
+      mapsQuery: "FUJISAN SHOKUPAN 河口湖",
+      links: [
+        { label: "官方網站", url: "https://fujisan-shokupan.com/", kind: "official" },
+      ]
     },
     {
       id: "oishi",
@@ -216,7 +262,10 @@ window.TRIP = {
       origin: "北岸面向南方富士，無大廈遮擋，係自然形成嘅觀景位置。",
       stories: "冬日風大好凍，着夠暖；附近有 L'ESSENCE，Day 3 可再訪咖啡。",
       highlights: ["北岸開闊湖景", "富士倒影經典角", "風大帶圍巾手套"],
-      mapsQuery: "Oishi Park Kawaguchiko"
+      mapsQuery: "Oishi Park Kawaguchiko",
+      links: [
+        { label: "觀光資訊", url: "https://www.yamanashi-kankou.jp/kankou/spot/p_8334.html", kind: "ref" },
+      ]
     },
     {
       id: "ropeway",
@@ -234,7 +283,10 @@ window.TRIP = {
       origin: "選喺天上山，係因為高度同位置可同時框住湖面同富士山體。",
       stories: "冬天山頂風勁，手套圍巾必備；票價同時間出發前睇官網。",
       highlights: ["約 3 分鐘上山頂", "360° 展望", "冬天風勁着暖"],
-      mapsQuery: "Kawaguchiko Mt Fuji Panorama Ropeway"
+      mapsQuery: "Kawaguchiko Mt Fuji Panorama Ropeway",
+      links: [
+        { label: "官方網站", url: "https://www.mtfujiropeway.jp/", kind: "official" },
+      ]
     },
     {
       id: "mizno",
@@ -252,7 +304,11 @@ window.TRIP = {
       origin: "揀湖畔住，係為咗日落後唔使再趕車，浸完湯可以直接睇湖面夜色。",
       stories: "入湯稅 ¥150 現場付；CI 15:00、CO 翌日 11:00。斜路積雪時減速、留足距離。",
       highlights: ["和室・湖景＋富士露台", "入湯稅現場付", "雪天斜路小心"],
-      mapsQuery: "湖のホテル 河口湖"
+      mapsQuery: "湖のホテル 河口湖",
+      links: [
+        { label: "官方網站", url: "https://mzn.jp/", kind: "official" },
+        { label: "訂房確認 PDF", url: "https://drive.google.com/file/d/1eCnZ7Y_xqtPfgN7nw5oBbeQsri59m1Tk/view?usp=drivesdk", kind: "drive" },
+      ]
     },
     {
       id: "unayoshi",
@@ -306,7 +362,10 @@ window.TRIP = {
       origin: "選喺西湖西北岸扇狀地重建，係為咗恢復茅草屋風景，同時傳承林業、炭燒、養蠶等地方文化。",
       stories: "園內有手作體驗同餐飲；砂防館值得一看，明白呢度唔只係「打卡村」，而係災難後嘅重生。前渡邊家等少數建築倖存，屬珍貴史料。",
       highlights: ["かぶと造り茅草屋群", "手作體驗＋砂防博物館", "冬天積雪畫意｜確認冬季時間"],
-      mapsQuery: "西湖いやしの里根場"
+      mapsQuery: "西湖いやしの里根場",
+      links: [
+        { label: "官方網站", url: "https://saikoiyashinosatonenba.jp/", kind: "official" },
+      ]
     },
     {
       id: "saikotei",
@@ -342,7 +401,10 @@ window.TRIP = {
       origin: "「富岳」係富士山雅稱，「風穴」指空氣流通嘅溶岩洞——充足換氣令古時可以長期冷藏。",
       stories: "入洞約 15 分鐘來回；可見熔岩棚、繩狀熔岩同夏日都不化嘅冰柱。着褸、小心碰頭同濕滑。同鳴澤氷穴等一齊管理，入口有木站商店。",
       highlights: ["201 m 橫穴易行", "常年約 3°C 冰柱", "天然記念物｜加褸防滑"],
-      mapsQuery: "富岳風穴"
+      mapsQuery: "富岳風穴",
+      links: [
+        { label: "官方網站", url: "https://www.mtfuji-cave.com/", kind: "official" },
+      ]
     },
     {
       id: "shoji",
@@ -360,7 +422,10 @@ window.TRIP = {
       origin: "湖岸同樹林嘅相對位置，令富士看起來好似被抱住，因而得名子抱き。",
       stories: "短停拍照即可；湖邊風凍，路面可能結冰。",
       highlights: ["子抱き富士經典角", "冬日結冰寧靜", "短停拍照｜小心結冰"],
-      mapsQuery: "精進湖 他手合浜"
+      mapsQuery: "精進湖 他手合浜",
+      links: [
+        { label: "觀光資訊", url: "https://shojiko-kanko.com/", kind: "ref" },
+      ]
     },
     {
       id: "motosu",
@@ -378,7 +443,10 @@ window.TRIP = {
       origin: "本栖湖水深、湖面開闊，南岸／峠位置可完整框住富士對稱山體同倒影。",
       stories: "冬日中ノ倉峠可能因雪／結冰封閉——低處湖畔觀景台通常較穩陣，唔使硬衝峠。",
       highlights: ["舊千円札富士角度", "湖畔／中ノ倉峠", "雪天改低處展望"],
-      mapsQuery: "本栖湖 千円札 展望"
+      mapsQuery: "本栖湖 千円札 展望",
+      links: [
+        { label: "觀光資訊", url: "http://motosuko.com/", kind: "ref" },
+      ]
     },
     {
       id: "forestmall",
@@ -396,7 +464,10 @@ window.TRIP = {
       origin: "位處往返西湖／河口湖動線，適合「買完餸直去住宿」。",
       stories: "後備 Ogino 河口湖店（船津，09:00–21:00）。火鍋料、飲料、早餐一次過搞掂。",
       highlights: ["MaxValu 等齊全", "買火鍋料順路", "後備 Ogino 船津"],
-      mapsQuery: "Forest Mall 富士河口湖"
+      mapsQuery: "Forest Mall 富士河口湖",
+      links: [
+        { label: "官方網站", url: "https://fujikawaguchiko.forest-mall.com/", kind: "official" },
+      ]
     },
     {
       id: "airbnb",
@@ -414,7 +485,10 @@ window.TRIP = {
       origin: "選西湖係為咗同 Day 3 西邊三湖動線吻合，夜晚唔使再長途開車。",
       stories: "確認 HM5WBB3CJB；現訂 CO 17/2，計劃縮短至 16/2 朝早（待改訂）。廚房用隔熱墊、開抽油煙機。",
       highlights: ["借鍋＋卡式爐打邊爐", "西湖森林夜靜", "縮短待改訂｜免費取消期留意"],
-      mapsQuery: "1210-3 Saiko Fujikawaguchiko"
+      mapsQuery: "1210-3 Saiko Fujikawaguchiko",
+      links: [
+        { label: "訂房確認 PDF", url: "https://drive.google.com/file/d/13B6BjRRF4Mo2MKSi72n-S2CibGWG0Qwj/view?usp=drivesdk", kind: "drive" },
+      ]
     },
     {
       id: "hakone-shrine",
@@ -432,7 +506,10 @@ window.TRIP = {
       origin: "箱根山自古係山岳信仰靈場；万巻上人將社殿置於蘆之湖畔，令湖同山一齊成為聖地。九頭龍信仰同湖水神事，源於調伏毒龍化為湖守護神嘅緣起故事。",
       stories: "參拜完可沿湖散步望鳥居；風大好凍。官網 hakonejinja.or.jp。九頭龍神社本宮同新宮都喺附近，有興趣可一併了解。",
       highlights: ["平和の鳥居湖中立", "757 年社傳創建", "冬天着暖｜參拜＋湖畔散步"],
-      mapsQuery: "箱根神社"
+      mapsQuery: "箱根神社",
+      links: [
+        { label: "官方網站", url: "https://hakonejinja.or.jp/", kind: "official" },
+      ]
     },
     {
       id: "ashi",
@@ -450,7 +527,10 @@ window.TRIP = {
       origin: "箱根火山中央火口丘一帶嘅地形同水系，自然匯成呢個高原湖。",
       stories: "2 月風勁；遊船班次出發前確認。唔使強迫上船——岸邊望平和鳥居同遠景已經好靚。",
       highlights: ["火山口湖望富士", "同神社一程行", "冬霧同風｜岸邊已足夠"],
-      mapsQuery: "芦ノ湖"
+      mapsQuery: "芦ノ湖",
+      links: [
+        { label: "觀光資訊", url: "https://www.hakone.or.jp/6317", kind: "ref" },
+      ]
     },
     {
       id: "glass",
@@ -468,7 +548,10 @@ window.TRIP = {
       origin: "仙石原開闊草地同高原光線適合户外玻璃雕塑同散步。",
       stories: "時間／休館出發前確認；下午景點同彫刻之森／強羅揀 1–2 個即可，唔好貪多。",
       highlights: ["威尼斯玻璃＋庭園", "冬天偏室內展", "下午擇一即可"],
-      mapsQuery: "箱根ガラスの森美術館"
+      mapsQuery: "箱根ガラスの森美術館",
+      links: [
+        { label: "官方網站", url: "https://www.hakone-garasunomori.jp/", kind: "official" },
+      ]
     },
     {
       id: "openair",
@@ -486,7 +569,10 @@ window.TRIP = {
       origin: "選箱根山林，係想讓雕塑「呼吸」喺真實風景入面，而唔係只困喺白盒子展廳。",
       stories: "着行山鞋；冬季時間出發前確認。網之森規則嚴（脫鞋、唔好跑等），大人主要喺外欣賞木組同色彩。",
       highlights: ["1969 年開館户外雕塑", "ネットの森木造穹頂", "行山鞋｜晴天行草地"],
-      mapsQuery: "箱根 彫刻の森美術館"
+      mapsQuery: "箱根 彫刻の森美術館",
+      links: [
+        { label: "官方網站", url: "https://www.hakone-oam.or.jp/", kind: "official" },
+      ]
     },
     {
       id: "gora",
@@ -504,7 +590,10 @@ window.TRIP = {
       origin: "強羅隨箱根登山鐵道發展成高原度假地，公園為住客同旅客提供歐風庭園體驗。",
       stories: "冬季開放時間出發前確認；溫室喺凍天特別吸引。",
       highlights: ["1914 法式庭園", "噴水池＋溫室", "近強羅酒店散步"],
-      mapsQuery: "強羅公園"
+      mapsQuery: "強羅公園",
+      links: [
+        { label: "官方網站", url: "https://www.hakonenavi.jp/gorapark/", kind: "official" },
+      ]
     },
     {
       id: "hakone-hotel",
@@ -540,7 +629,10 @@ window.TRIP = {
       origin: "選御殿場係因為箱根→東名返東京嘅動線順路，又可望富士。",
       stories: "12–2 月 10:00–19:00；17/2（三）有開。免費泊約 7,000；立體車高約 2.1 m。目標 15:30–15:45 離開去とらや工房。",
       highlights: ["約 290 店", "夢の大橋望富士", "15:30 前離開較穩"],
-      mapsQuery: "Gotemba Premium Outlets"
+      mapsQuery: "Gotemba Premium Outlets",
+      links: [
+        { label: "官方網站", url: "https://www.premiumoutlets.co.jp/gotemba/", kind: "official" },
+      ]
     },
     {
       id: "toraya",
@@ -558,7 +650,10 @@ window.TRIP = {
       origin: "揀御殿場自然環境，係為咗適合做菓子嘅空氣同空間，同時服務來 Outlet 嘅旅客。",
       stories: "注意：❌ 唔係「虎屋菓寮御殿場店」（該店 2027-02-17 休）。目標 ~16:00 到，冬季關店 17:00。",
       highlights: ["工房直賣和菓子", "約 30 分鐘", "唔好去錯菓寮分店"],
-      mapsQuery: "とらや工房 御殿場"
+      mapsQuery: "とらや工房 御殿場",
+      links: [
+        { label: "官方網站", url: "https://www.toraya-kobo.jp/", kind: "official" },
+      ]
     },
     {
       id: "tokyo-chill",
