@@ -1,19 +1,36 @@
-Photo credits (Wikimedia Commons) — used under respective CC / public-domain licenses:
-- kawaguchiko.jpg — "Kawaguchiko & Fuji, Japan (48852141032).jpg"
-- mt-fuji.jpg — "Autumn leaf color and Mount Fuji from Lake Kawaguchi.jpg"
-- chureito.jpg — "Mount Fuji, Arakurayama Sengen Park 20241022.jpg"
-- ashinoko.jpg — "Lake Ashi & Mt Fuji & Hakone Shrine.jpg"
-- ashi-classic.jpg — "Classic Hakone shot @ Lake Ashi @ Hakone (13776557893).jpg"
-- hakone-fuji.jpg — "Mount Fuji from Lake Ashi 20211202-1.jpg"
-- hakone-shrine.jpg — "Hakone-jinja torii 20211202.jpg"
-- motosu.jpg — "Mount Fuji from Lake Motosu.jpg"
-- saiko.jpg — "Mt. Fuji with Saiko pictured from Lake Saiko Nenma-hama.jpg"
-- nenba.jpg — "Aerial panorama of Mount Fuji with Saiko Iyashi-no-Sato Nenba..."
-- shoji.jpg — "Kodaki fuji frm shojinko.jpg"
-- wind-cave.jpg — "Fugaku Fuketu Entrance Stairs 20161025.jpg"
-- gotemba.jpg — "Gotemba premium outlets1.jpg"
+Photo credits (Wikimedia Commons) — used under respective CC / public-domain licenses.
+
+Core / landmarks:
+- narita.jpg — "Garuda Indonesia B747… at Narita International Airport (1).jpg"
 - shinjuku.jpg — "Shinjuku skyscraper 2.jpg"
-- shinjuku2.jpg — "Kabukicho red gate... Shinjuku, Tokyo, Japan.jpg"
-- narita.jpg — "Garuda Indonesia B747... at Narita International Airport (1).jpg"
-- owakudani.jpg — "Owakudani @ Hakone (10621413133).jpg"
-See README for full attribution / license links.
+- shinjuku-west.jpg — "Shinjuku-station West-area.jpg" (CC BY-SA 4.0, MaedaAkihiko) — Shinjuku Station west exit area for Nissan rental card
+- chureito.jpg — "Mount Fuji, Arakurayama Sengen Park 20241022.jpg"
+- mt-fuji.jpg — "Autumn leaf color and Mount Fuji from Lake Kawaguchi.jpg"
+- oishi-park.jpg — "Mount Fuji from Oishi Park.jpg" (CC BY-SA 4.0, Alpsdake)
+- ropeway.jpg — "Mt Kachi Kachi Ropeway.jpg"
+- mizno-lakeside.jpg — "Oishi in Fujikawaguchiko 02.jpg" (CC BY-SA 4.0, Olaf2) — AREA CONTEXT: north Kawaguchiko / Oishi lakeside near 湖のホテル; not the hotel facade
+- nenba.jpg — Aerial panorama… Saiko Iyashi-no-Sato Nenba…
+- saiko.jpg — "Mt. Fuji with Saiko pictured from Lake Saiko Nenma-hama.jpg"
+- wind-cave.jpg — "Fugaku Fuketu Entrance Stairs 20161025.jpg"
+- shoji.jpg — "Kodaki fuji frm shojinko.jpg"
+- motosu.jpg — "Mount Fuji from Lake Motosu.jpg"
+- hakone-shrine.jpg — "Hakone-jinja torii 20211202.jpg"
+- ashinoko.jpg — "Lake Ashi & Mt Fuji & Hakone Shrine.jpg"
+- hakone-fuji.jpg — "Mount Fuji from Lake Ashi 20211202-1.jpg" — generic Hakone / Ashi for TBD hotel
+- glass-forest.jpg — "Hakone Venetian Glass Museum.jpg"
+- hakone-open-air.jpg — "Hakone Open-air Museum 20211202-5.jpg" (CC BY-SA 4.0, Suicasmo) — Woods of Net pavilion
+- gora-park.jpg — "Gōra Park 20090818 10.jpg" (CC BY-SA 3.0, 掬茶)
+- gotemba.jpg — "Gotemba premium outlets1.jpg"
+- toraya-koubou.jpg — "Toraya koubou gotemba.JPG" (CC BY-SA 3.0, Jungle) — とらや工房 exterior
+- forest-mall.jpg — "ForestMall Fuji-Kawaguchiko.JPG" (CC BY-SA 3.0, Chugakusei485)
+- tokyo-chill.jpg — "Tokyo Metropolitan Government Building No.1 (1991) from Shinjuku Central Park…" (CC BY-SA 4.0, Another Believer)
+
+Cuisine / area stand-ins (private shops with no Commons storefront, or honest food photo):
+- fabcafe-honcho.jpg — "Honcho Street with Mount Fuji in the daytime, Fujiyoshida, 2016.jpg" (CC0, DimiTalen) — AREA CONTEXT: FabCafe Fuji is on 本町通; not the café facade
+- hoto-ayumi.jpg — "黄金ほうとう歩成 ほうとう味くらべ大会 祝 三連覇 (19861478506).jpg" (CC BY 2.0, Hideto KOBAYASHI via Flickr / Benzoyl) — ほうとう蔵 歩成 storefront
+- shokupan.jpg — "Japanese Milk Bread.jpg" (CC BY-SA 2.0, ChrisHamby) — CUISINE STAND-IN for FUJISAN SHOKUPAN (no Commons photo of that shop)
+- unaju.jpg — "Unaju by Kawatoyo Honten.jpg" (CC BY-SA 4.0, Miyuki Meinaka) — CUISINE STAND-IN for 甲州うなよし (unagi set; not that restaurant)
+- cafe-coffee.jpg — "Manual drip (pour-over) coffee.jpg" (CC0, Kim Sanso / Herbeater) — CAFE STAND-IN for L'ESSENCE (no Commons storefront)
+- soba.jpg — "ざるそば（手打そば一ぷく）.jpg" (CC BY-SA 4.0, くろふね / Jranar) — CUISINE STAND-IN for 彩呼亭 soba (not that venue)
+
+See README for the summary table. Do not replace with AI-generated hotel photos.

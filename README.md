@@ -63,27 +63,37 @@ All photos downloaded from **Wikimedia Commons**. Check each file page for the e
 
 Do not replace with AI-generated photos of real hotels.
 
-| Local file | Commons title (search) |
-|---|---|
-| kawaguchiko.jpg | Kawaguchiko & Fuji, Japan (48852141032).jpg |
-| mt-fuji.jpg | Autumn leaf color and Mount Fuji from Lake Kawaguchi.jpg |
-| chureito.jpg | Mount Fuji, Arakurayama Sengen Park 20241022.jpg |
-| hakone-shrine.jpg | Hakone-jinja torii 20211202.jpg |
-| ashinoko.jpg | Lake Ashi & Mt Fuji & Hakone Shrine.jpg |
-| ashi-classic.jpg | Classic Hakone shot @ Lake Ashi @ Hakone… |
-| hakone-fuji.jpg | Mount Fuji from Lake Ashi 20211202-1.jpg |
-| motosu.jpg | Mount Fuji from Lake Motosu.jpg |
-| saiko.jpg | Mt. Fuji with Saiko pictured from Lake Saiko Nenma-hama.jpg |
-| nenba.jpg | Aerial panorama… Saiko Iyashi-no-Sato Nenba… |
-| shoji.jpg | Kodaki fuji frm shojinko.jpg |
-| wind-cave.jpg | Fugaku Fuketu Entrance Stairs 20161025.jpg |
-| glass-forest.jpg | Hakone Venetian Glass Museum.jpg |
-| gotemba.jpg | Gotemba premium outlets1.jpg |
-| ropeway.jpg | Mt Kachi Kachi Ropeway.jpg |
-| shinjuku.jpg | Shinjuku skyscraper 2.jpg |
-| shinjuku2.jpg | Kabukicho red gate… Shinjuku… |
-| narita.jpg | Garuda Indonesia B747… Narita… |
-| owakudani.jpg | Owakudani @ Hakone… |
+| Local file | Commons title (search) | Notes |
+|---|---|---|
+| narita.jpg | Garuda Indonesia B747… Narita… | |
+| shinjuku.jpg | Shinjuku skyscraper 2.jpg | |
+| shinjuku-west.jpg | Shinjuku-station West-area.jpg | Nissan 西口 |
+| tokyo-chill.jpg | Tocho from Shinjuku Central Park… | calm daytime |
+| chureito.jpg | Mount Fuji, Arakurayama Sengen Park 20241022.jpg | |
+| mt-fuji.jpg | Autumn leaf color and Mount Fuji from Lake Kawaguchi.jpg | site hero |
+| fabcafe-honcho.jpg | Honcho Street… Fujiyoshida, 2016.jpg | area: FabCafe on 本町通 |
+| hoto-ayumi.jpg | 黄金ほうとう歩成…(19861478506).jpg | 歩成 storefront |
+| shokupan.jpg | Japanese Milk Bread.jpg | cuisine stand-in |
+| oishi-park.jpg | Mount Fuji from Oishi Park.jpg | |
+| ropeway.jpg | Mt Kachi Kachi Ropeway.jpg | |
+| mizno-lakeside.jpg | Oishi in Fujikawaguchiko 02.jpg | area: north lakeside |
+| unaju.jpg | Unaju by Kawatoyo Honten.jpg | cuisine stand-in |
+| cafe-coffee.jpg | Manual drip (pour-over) coffee.jpg | café stand-in |
+| nenba.jpg | Aerial… Saiko Iyashi-no-Sato Nenba… | |
+| soba.jpg | ざるそば（手打そば一ぷく）.jpg | cuisine stand-in 彩呼亭 |
+| saiko.jpg | Mt. Fuji… Lake Saiko Nenma-hama.jpg | Airbnb / Saiko |
+| wind-cave.jpg | Fugaku Fuketu Entrance Stairs 20161025.jpg | |
+| shoji.jpg | Kodaki fuji frm shojinko.jpg | |
+| motosu.jpg | Mount Fuji from Lake Motosu.jpg | |
+| forest-mall.jpg | ForestMall Fuji-Kawaguchiko.JPG | |
+| hakone-shrine.jpg | Hakone-jinja torii 20211202.jpg | |
+| ashinoko.jpg | Lake Ashi & Mt Fuji & Hakone Shrine.jpg | |
+| hakone-fuji.jpg | Mount Fuji from Lake Ashi 20211202-1.jpg | Hakone hotel TBD |
+| glass-forest.jpg | Hakone Venetian Glass Museum.jpg | |
+| hakone-open-air.jpg | Hakone Open-air Museum 20211202-5.jpg | |
+| gora-park.jpg | Gōra Park 20090818 10.jpg | |
+| gotemba.jpg | Gotemba premium outlets1.jpg | |
+| toraya-koubou.jpg | Toraya koubou gotemba.JPG | |
 
 Map tiles: © OpenStreetMap contributors · UI map: Leaflet.
 
