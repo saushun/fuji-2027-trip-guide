@@ -11,7 +11,7 @@ window.TRIP = {
     days: 6,
     nights: 5,
     travelers: ["Sunny", "Helen"],
-    updated: "2026-10-27 23:52",
+    updated: "2026-10-27 23:53",
     note: "行程或會微調；出發前請再確認營業時間同路況。",
     flights: {
       out: { code: "UO646", pnr: "DBY9RQ", from: "HKG T2 13:00", to: "NRT T2 18:05", date: "13/2" },
@@ -82,6 +82,7 @@ window.TRIP = {
       status: "booked",
       note: "日式西式禁煙房・附露天風呂 36㎡｜標準早晚餐｜CI 16/2 15:00–18:00｜CO 17/2 11:00｜2 成人｜已付 HK$2,698.51（約 ¥54,230；入浴稅 ¥150 現場）｜免費取消至 2027-02-08 23:59 JST｜電話 0460-86-1333｜要求：高層｜客房 22315097293596",
       links: [
+        { label: "訂房確認 PDF", url: "https://drive.google.com/file/d/1UrM6mSLfneXdfXWxYa9dUSAQ8TtIz9eY/view?usp=drivesdk", kind: "drive" },
         { label: "官方網站", url: "https://dormy-hotels.com/resort/hotels/setsugetsuka/", kind: "official" },
         { label: "Jalan 介紹", url: "https://www.jalan.net/yad371898/", kind: "ref" },
       ]
@@ -611,13 +612,14 @@ window.TRIP = {
       tags: ["住宿", "溫泉", "已訂"],
       intro: "強羅站步行約 1 分嘅共立リゾート溫泉旅館。已訂日式西式房（附露天風呂），標準早晚餐——Day 4  overnight 定點。",
       tips: "CI 16/2 15:00–18:00｜CO 17/2 11:00｜Rakuten 21315099251796｜電話 0460-86-1333｜要求高層｜入浴稅 ¥150 現場｜免費取消至 2027-02-08 23:59 JST。",
-      detail: "季之湯雪月花（共立リゾート／Dormy）喺箱根町強羅 1300-34，強羅站附近。已訂日式西式禁煙客房、附露天風呂、36㎡（最多 3 人）；計劃【標準】附晚餐及早餐。2 成人；訂位人 LEUNGSUNNY SAU SHUN；已付 HK$2,698.51（約 ¥54,230 扣券後）。Drive Stay PDF 尚未就緒，暫唔連 Drive。",
+      detail: "季之湯雪月花（共立リゾート／Dormy）喺箱根町強羅 1300-34，強羅站附近。已訂日式西式禁煙客房、附露天風呂、36㎡（最多 3 人）；計劃【標準】附晚餐及早餐。2 成人；訂位人 LEUNGSUNNY SAU SHUN；已付 HK$2,698.51（約 ¥54,230 扣券後）。訂房確認 PDF 見 Drive Stay。",
       history: "「雪月花」取日本風雅自然意象為名；共立リゾート喺箱根經營多間溫泉旅館。強羅隨箱根登山鐵道發展成高原溫泉度假地。",
       origin: "全室附檜露天風呂（客室風呂非溫泉），大湯屋用強羅／大涌谷強羅溫泉。選強羅係為咗近站同方便 Day 5 去御殿場。",
       stories: "Day 4 ~15:00–18:00 CI → 浸溫泉同方案晚餐。Day 5 目標 ~09:00–09:30 CO（正式 11:00）出發去御殿場 Outlet。Airbnb 仍計劃縮短 15→16（HM5WBB3CJB，待改訂）。",
       highlights: ["已訂・強羅", "露天風呂客房", "標準早晚餐", "Rakuten 21315099251796"],
       mapsQuery: "季の湯 雪月花 強羅",
       links: [
+        { label: "訂房確認 PDF", url: "https://drive.google.com/file/d/1UrM6mSLfneXdfXWxYa9dUSAQ8TtIz9eY/view?usp=drivesdk", kind: "drive" },
         { label: "官方網站", url: "https://dormy-hotels.com/resort/hotels/setsugetsuka/", kind: "official" },
         { label: "Jalan 介紹", url: "https://www.jalan.net/yad371898/", kind: "ref" },
       ]
