@@ -11,7 +11,7 @@ window.TRIP = {
     days: 6,
     nights: 5,
     travelers: ["Sunny", "Helen"],
-    updated: "2026-10-27 23:10",
+    updated: "2026-10-27 23:52",
     note: "行程或會微調；出發前請再確認營業時間同路況。",
     flights: {
       out: { code: "UO646", pnr: "DBY9RQ", from: "HKG T2 13:00", to: "NRT T2 18:05", date: "13/2" },
@@ -75,11 +75,16 @@ window.TRIP = {
     },
     {
       night: "16/2",
-      name: "箱根溫泉酒店",
-      area: "箱根",
-      confirm: "—",
-      status: "tbd",
-      note: "待定／短名單進行中｜計劃 CI ~15:00–16:00｜唔杜撰店名"
+      name: "季之湯雪月花（共立リゾート）",
+      area: "箱根・強羅",
+      address: "1300-34 Gora, Hakone-machi",
+      confirm: "Rakuten 21315099251796",
+      status: "booked",
+      note: "日式西式禁煙房・附露天風呂 36㎡｜標準早晚餐｜CI 16/2 15:00–18:00｜CO 17/2 11:00｜2 成人｜已付 HK$2,698.51（約 ¥54,230；入浴稅 ¥150 現場）｜免費取消至 2027-02-08 23:59 JST｜電話 0460-86-1333｜要求：高層｜客房 22315097293596",
+      links: [
+        { label: "官方網站", url: "https://dormy-hotels.com/resort/hotels/setsugetsuka/", kind: "official" },
+        { label: "Jalan 介紹", url: "https://www.jalan.net/yad371898/", kind: "ref" },
+      ]
     },
     {
       night: "17/2",
@@ -597,21 +602,25 @@ window.TRIP = {
     },
     {
       id: "hakone-hotel",
-      name: "箱根溫泉酒店（待定）",
-      nameJa: "箱根温泉ホテル TBD",
+      name: "季之湯雪月花（共立リゾート）",
+      nameJa: "箱根強羅温泉 季の湯 雪月花",
       day: 4,
-      lat: 35.2320,
-      lng: 139.0500, // rough Hakone-Yumoto / Gora area placeholder for map
+      lat: 35.2505, // approx Gora / near Gora Station
+      lng: 139.0485,
       image: "images/hakone-fuji.jpg",
-      tags: ["住宿", "溫泉", "TBD"],
-      intro: "今晚嘅溫泉過夜係成趟旅程嘅鬆一鬆時刻。店名仍喺短名單，訂好再更新呢張卡。",
-      tips: "店名／價格 TBD，唔杜撰。計劃 CI ~15:00–16:00｜CO 17/2 朝早。午餐同晚餐都係待定。",
-      detail: "箱根溫泉酒店仍待定（TBD）——唔杜撰店名。今晚重點係浸溫泉放鬆。箱根湯本至強羅一帶溫泉文化悠久，訂好再更新呢張卡。",
-      history: "箱根溫泉開湯傳說同萬卷上人、古東海道旅人休息相關；江戶時代關所同街道令箱根成為東西往來嘅湯治地。近現代則形成湯本、強羅、仙石原等多個溫泉鄉。",
-      origin: "箱根火山帶來豐富溫泉源；各地區泉質同氛圍略有不同，短名單應按位置（近神社／近強羅）同預算再揀。",
-      stories: "店名／價格 TBD。計劃 CI ~15:00–16:00，CO 17/2 朝早。午餐同晚餐都待定——訂房後再補實用資訊。",
-      highlights: ["溫泉過夜 TBD", "唔杜撰店名", "訂後再更新卡片"],
-      mapsQuery: "箱根湯本"
+      tags: ["住宿", "溫泉", "已訂"],
+      intro: "強羅站步行約 1 分嘅共立リゾート溫泉旅館。已訂日式西式房（附露天風呂），標準早晚餐——Day 4  overnight 定點。",
+      tips: "CI 16/2 15:00–18:00｜CO 17/2 11:00｜Rakuten 21315099251796｜電話 0460-86-1333｜要求高層｜入浴稅 ¥150 現場｜免費取消至 2027-02-08 23:59 JST。",
+      detail: "季之湯雪月花（共立リゾート／Dormy）喺箱根町強羅 1300-34，強羅站附近。已訂日式西式禁煙客房、附露天風呂、36㎡（最多 3 人）；計劃【標準】附晚餐及早餐。2 成人；訂位人 LEUNGSUNNY SAU SHUN；已付 HK$2,698.51（約 ¥54,230 扣券後）。Drive Stay PDF 尚未就緒，暫唔連 Drive。",
+      history: "「雪月花」取日本風雅自然意象為名；共立リゾート喺箱根經營多間溫泉旅館。強羅隨箱根登山鐵道發展成高原溫泉度假地。",
+      origin: "全室附檜露天風呂（客室風呂非溫泉），大湯屋用強羅／大涌谷強羅溫泉。選強羅係為咗近站同方便 Day 5 去御殿場。",
+      stories: "Day 4 ~15:00–18:00 CI → 浸溫泉同方案晚餐。Day 5 目標 ~09:00–09:30 CO（正式 11:00）出發去御殿場 Outlet。Airbnb 仍計劃縮短 15→16（HM5WBB3CJB，待改訂）。",
+      highlights: ["已訂・強羅", "露天風呂客房", "標準早晚餐", "Rakuten 21315099251796"],
+      mapsQuery: "季の湯 雪月花 強羅",
+      links: [
+        { label: "官方網站", url: "https://dormy-hotels.com/resort/hotels/setsugetsuka/", kind: "official" },
+        { label: "Jalan 介紹", url: "https://www.jalan.net/yad371898/", kind: "ref" },
+      ]
     },
     {
       id: "gotemba",
@@ -734,17 +743,17 @@ window.TRIP = {
       id: 4,
       date: "16/2（二）",
       title: "箱根全日 + 溫泉過夜",
-      subtitle: "神社、蘆之湖、溫泉（酒店 TBD）",
+      subtitle: "神社、蘆之湖、季之湯雪月花",
       hero: "images/hakone-shrine.jpg",
-      summary: "Airbnb 提早出發入箱根：神社＋蘆之湖 → 午餐待定 → 玻璃之森／彫刻之森／強羅擇 1–2 → 溫泉酒店 CI。",
+      summary: "Airbnb 提早出發入箱根：神社＋蘆之湖 → 午餐待定 → 玻璃之森／彫刻之森／強羅擇 1–2 → 季之湯雪月花 CI（已訂）。",
       timeline: [
-        { time: "~09:00", text: "西湖 Airbnb 提早 CO／出發（現訂仍 CO 17/2 → 縮短待改訂）", placeId: "airbnb" },
+        { time: "~09:00", text: "西湖 Airbnb 提早 CO／出發（現訂仍 CO 17/2 → 縮短待改訂 HM5WBB3CJB）", placeId: "airbnb" },
         { time: "~10:30", text: "箱根神社 + 蘆之湖（1–1.5 小時）", placeId: "hakone-shrine" },
         { time: "~12:00", text: "午餐：箱根町／湯本一帶（待定，唔杜撰）", placeId: null },
         { time: "午後", text: "可選：ガラスの森／彫刻の森／強羅公園（揀 1–2）", placeId: "glass" },
         { time: "午後", text: "大涌谷／空中纜車僅天氣＋火山氣體許可（常停駛，唔寫死）", placeId: null },
-        { time: "~15:00–16:00", text: "箱根溫泉酒店 CI（店名 TBD）→ 浸溫泉", placeId: "hakone-hotel" },
-        { time: "晚", text: "晚餐：酒店內或附近（待定）", placeId: "hakone-hotel" }
+        { time: "~15:00–18:00", text: "季之湯雪月花 CI（Rakuten 21315099251796｜強羅）→ 浸溫泉", placeId: "hakone-hotel" },
+        { time: "晚", text: "晚餐：雪月花方案內含（標準晚餐）", placeId: "hakone-hotel" }
       ],
       transport: "國道 139 → 富士吉田 IC → 東富士五湖道路 → 箱根｜約 1.5–2 小時｜要 ETC｜山路冬天可能結冰，雪胎必備。"
     },
@@ -754,9 +763,9 @@ window.TRIP = {
       title: "箱根 → 御殿場 → 新宿",
       subtitle: "Outlet、虎屋工房、還車",
       hero: "images/gotemba.jpg",
-      summary: "酒店出發去御殿場 Outlet 半日，再到とらや工房，入油後東名返新宿還車，入住 Kadoya。",
+      summary: "季之湯雪月花（強羅）CO → 御殿場 Outlet 半日 → とらや工房 → 入油後東名返新宿還車，入住 Kadoya。",
       timeline: [
-        { time: "~09:00–09:30", text: "箱根溫泉酒店 CO → 御殿場（約 30–60 分）", placeId: "hakone-hotel" },
+        { time: "~09:00–09:30", text: "季之湯雪月花 CO（正式 11:00；目標早走）→ 御殿場（約 40–70 分）", placeId: "hakone-hotel" },
         { time: "~10:00–10:30", text: "御殿場プレミアム・アウトレット（玩至 ~15:30）", placeId: "gotemba" },
         { time: "午", text: "Outlet 內午餐（店多，出發前確認）", placeId: "gotemba" },
         { time: "~15:30", text: "離開 Outlet → とらや工房（~16:00，約 30 分）", placeId: "toraya" },

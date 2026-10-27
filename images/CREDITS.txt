@@ -16,7 +16,7 @@ Core / landmarks:
 - motosu.jpg — "Mount Fuji from Lake Motosu.jpg"
 - hakone-shrine.jpg — "Hakone-jinja torii 20211202.jpg"
 - ashinoko.jpg — "Lake Ashi & Mt Fuji & Hakone Shrine.jpg"
-- hakone-fuji.jpg — "Mount Fuji from Lake Ashi 20211202-1.jpg" — generic Hakone / Ashi for TBD hotel
+- hakone-fuji.jpg — "Mount Fuji from Lake Ashi 20211202-1.jpg" — generic Hakone / Ashi for 雪月花 place card (not hotel official photo)
 - glass-forest.jpg — "Hakone Venetian Glass Museum.jpg"
 - hakone-open-air.jpg — "Hakone Open-air Museum 20211202-5.jpg" (CC BY-SA 4.0, Suicasmo) — Woods of Net pavilion
 - gora-park.jpg — "Gōra Park 20090818 10.jpg" (CC BY-SA 3.0, 掬茶)

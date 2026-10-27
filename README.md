@@ -53,7 +53,7 @@ trip-guide/
 - 行程來源：`/workspace/fuji2027/富士五湖2027行程.md`（2026-10-27）
 - 座標：OpenStreetMap Nominatim（2026-10-27 查詢）＋個別地址近似座標（見 `js/data.js` 註解）
 - 租車：站內標示已訂確認號 `26101305986`（行程檔曾寫報價中；以確認號為準）
-- 箱根酒店：**TBD**，未杜撰訂位
+- 箱根酒店：**季之湯雪月花（共立リゾート）**｜Rakuten **21315099251796**｜CI 16/2 15:00–18:00、CO 17/2 11:00｜Airbnb 縮短 15→16 仍待改訂
 
 ---
 
@@ -88,7 +88,7 @@ Do not replace with AI-generated photos of real hotels.
 | forest-mall.jpg | ForestMall Fuji-Kawaguchiko.JPG | |
 | hakone-shrine.jpg | Hakone-jinja torii 20211202.jpg | |
 | ashinoko.jpg | Lake Ashi & Mt Fuji & Hakone Shrine.jpg | |
-| hakone-fuji.jpg | Mount Fuji from Lake Ashi 20211202-1.jpg | Hakone hotel TBD |
+| hakone-fuji.jpg | Mount Fuji from Lake Ashi 20211202-1.jpg | 雪月花 place card（Commons 風景，非酒店官方照） |
 | glass-forest.jpg | Hakone Venetian Glass Museum.jpg | |
 | hakone-open-air.jpg | Hakone Open-air Museum 20211202-5.jpg | |
 | gora-park.jpg | Gōra Park 20090818 10.jpg | |
