@@ -814,3 +814,11 @@ body.modal-open { overflow: hidden; }
   .day-hero { height: 180px; }
   .section { padding: 3rem 1.15rem; }
 }
+
+.hero-updated {
+  opacity: 0.85;
+  font-size: 0.85em;
+}
+#last-updated-hero {
+  font-variant-numeric: tabular-nums;
+}

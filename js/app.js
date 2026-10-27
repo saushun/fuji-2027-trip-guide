@@ -3,6 +3,22 @@
   const T = window.TRIP;
   if (!T) return;
 
+  /* —— Last updated stamp (HKT) —— */
+  (function stampUpdated() {
+    const raw = (T.meta && T.meta.updated) || "";
+    const label = raw ? `${raw}（香港時間）` : "";
+    const foot = document.getElementById("last-updated");
+    const hero = document.getElementById("last-updated-hero");
+    if (foot && label) foot.textContent = label;
+    if (hero && raw) {
+      hero.textContent = `${raw}（香港時間）`;
+      // datetime attr: expect "YYYY-MM-DD HH:MM"
+      const m = raw.match(/(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2})/);
+      if (m) hero.setAttribute("datetime", `${m[1]}T${m[2]}:00+08:00`);
+    }
+  })();
+
+
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 
