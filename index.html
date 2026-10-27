@@ -85,7 +85,7 @@
       <div class="section-head reveal">
         <div class="eyebrow">Guide cards</div>
         <h2>景點導遊卡</h2>
-        <p>每個地方一段導遊介紹、實用 tips（冬天、現金、ETC），同 Google 地圖連結。</p>
+        <p>每個地方一張導遊卡——撳卡睇完整導覽：歷史、由來、故事、特色同實用提示。地圖標記亦可打開詳情。</p>
       </div>
       <div id="all-cards" class="cards-grid"></div>
     </section>
@@ -111,6 +111,13 @@
       </div>
     </div>
   </footer>
+
+  <div id="place-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true" hidden>
+    <div class="modal-wrap" role="document">
+      <button type="button" class="modal-close" aria-label="關閉">×</button>
+      <div id="place-modal-content"></div>
+    </div>
+  </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="js/data.js"></script>

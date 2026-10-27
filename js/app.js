@@ -142,11 +142,15 @@
         <div class="popup-title">${p.name}</div>
         <div class="popup-day">Day ${p.day}</div>
         <div style="font-size:0.82rem;margin-bottom:0.4rem">${(p.intro || "").slice(0, 80)}…</div>
-        <a class="popup-link" href="#place-${p.id}">睇導遊介紹 →</a><br>
+        <button type="button" class="popup-link popup-detail" data-place="${p.id}" style="background:none;border:none;padding:0;color:inherit;text-decoration:underline;cursor:pointer;font:inherit">打開完整導覽 →</button><br>
         <a class="popup-link" href="${gmapsUrl(p)}" target="_blank" rel="noopener">在 Google 地圖開啟</a>
       `);
       m.on("click", () => {
         highlightPlace(p.id);
+      });
+      m.on("popupopen", () => {
+        const btn = document.querySelector(`.popup-detail[data-place="${p.id}"]`);
+        if (btn) btn.onclick = (ev) => { ev.preventDefault(); openPlaceModal(p.id); };
       });
       markers[p.id] = m;
       bounds.push([p.lat, p.lng]);
@@ -255,7 +259,7 @@
                 <p>${t.text}</p>
                 ${
                   t.placeId
-                    ? `<button type="button" class="place-jump" data-place="${t.placeId}">導遊介紹 · 地圖</button>`
+                    ? `<button type="button" class="place-jump" data-place="${t.placeId}">完整導覽</button>`
                     : ""
                 }
               </div>
@@ -272,14 +276,7 @@
       if (!btn) return;
       const id = btn.dataset.place;
       highlightPlace(id);
-      flyToPlace(id);
-      const card = document.getElementById(`place-${id}`);
-      if (card) {
-        // ensure day panel showing that card's day
-        const p = placeById(id);
-        if (p) showDay(p.day);
-        setTimeout(() => card.scrollIntoView({ behavior: "smooth", block: "center" }), 100);
-      }
+      openPlaceModal(id);
     });
   }
 
@@ -295,7 +292,7 @@
     const tags = (p.tags || []).map((t) => `<span class="tag">${t}</span>`).join("");
     const idAttr = opts.withId === false ? "" : `id="place-${p.id}"`;
     return `
-      <article class="place-card reveal" ${idAttr} data-place-id="${p.id}">
+      <article class="place-card reveal" ${idAttr} data-place-id="${p.id}" tabindex="0" role="button" aria-label="打開 ${p.name} 導覽詳情">
         <div class="place-card-img">
           <img src="${p.image}" alt="${p.name}" loading="lazy">
         </div>
@@ -303,10 +300,12 @@
           <div class="place-tags">${tags}<span class="tag">Day ${p.day}</span></div>
           <h3>${p.name}</h3>
           <div class="place-ja">${p.nameJa || ""}</div>
+          <p class="place-card-hint">撳卡睇完整導覽 →</p>
           <p class="place-intro">${p.intro}</p>
           <div class="place-tips">💡 ${p.tips}</div>
           <div class="place-actions">
-            <a class="btn btn-primary" href="${gmapsUrl(p)}" target="_blank" rel="noopener">在 Google 地圖開啟</a>
+            <button type="button" class="btn btn-primary open-detail" data-place="${p.id}">完整導覽</button>
+            <a class="btn" href="${gmapsUrl(p)}" target="_blank" rel="noopener">Google 地圖</a>
             <button type="button" class="btn map-focus" data-place="${p.id}">地圖標記</button>
           </div>
         </div>
@@ -332,6 +331,69 @@
     });
     allCardsEl.innerHTML = ordered.map(renderCard).join("");
     // map-focus handled via document delegation below
+  }
+
+
+  /* —— Place detail modal —— */
+  const modalEl = $("#place-modal");
+  const modalContent = $("#place-modal-content");
+  let lastFocus = null;
+
+  function openPlaceModal(id) {
+    const p = placeById(id);
+    if (!p || !modalEl || !modalContent) return;
+    lastFocus = document.activeElement;
+    const tags = (p.tags || [])
+      .map((t) => `<span class="tag">${t}</span>`)
+      .join("") + `<span class="tag">Day ${p.day}</span>`;
+    const highlights = (p.highlights || [])
+      .map((h) => `<li>${h}</li>`)
+      .join("");
+    modalContent.innerHTML = `
+      <div class="modal-hero">
+        <img src="${p.image}" alt="${p.name}">
+        <div class="modal-hero-cap">
+          <div class="eyebrow">Place guide · Day ${p.day}</div>
+          <h2>${p.name}</h2>
+          <div class="ja">${p.nameJa || ""}</div>
+        </div>
+      </div>
+      <div class="modal-scroll">
+        <div class="modal-tags">${tags}</div>
+        <div class="modal-section">
+          <h3>概覽</h3>
+          <p>${p.detail || p.intro || ""}</p>
+        </div>
+        ${p.history ? `<div class="modal-section"><h3>歷史</h3><p>${p.history}</p></div>` : ""}
+        ${p.origin ? `<div class="modal-section"><h3>由來</h3><p>${p.origin}</p></div>` : ""}
+        ${p.stories ? `<div class="modal-section"><h3>故事</h3><p>${p.stories}</p></div>` : ""}
+        ${highlights ? `<div class="modal-section"><h3>特色看點</h3><ul class="modal-highlights">${highlights}</ul></div>` : ""}
+        <div class="modal-section">
+          <h3>實用提示</h3>
+          <div class="modal-tips-box">💡 ${p.tips || ""}</div>
+        </div>
+        <div class="modal-actions">
+          <a class="btn btn-primary" href="${gmapsUrl(p)}" target="_blank" rel="noopener">在 Google 地圖開啟</a>
+          <button type="button" class="btn map-focus" data-place="${p.id}">睇地圖標記</button>
+          <button type="button" class="btn modal-dismiss">關閉</button>
+        </div>
+      </div>`;
+    modalEl.hidden = false;
+    modalEl.classList.add("open");
+    modalEl.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+    highlightPlace(id);
+    modalEl.querySelector(".modal-close")?.focus();
+  }
+
+  function closePlaceModal() {
+    if (!modalEl) return;
+    modalEl.classList.remove("open");
+    modalEl.setAttribute("aria-hidden", "true");
+    modalEl.hidden = true;
+    document.body.classList.remove("modal-open");
+    if (modalContent) modalContent.innerHTML = "";
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
 
   function highlightPlace(id) {
@@ -367,10 +429,44 @@
   observeReveals();
 
   document.addEventListener("click", (e) => {
-    const btn = e.target.closest(".map-focus");
-    if (!btn) return;
-    flyToPlace(btn.dataset.place);
-    $("#map-section")?.scrollIntoView({ behavior: "smooth" });
+    const dismiss = e.target.closest(".modal-dismiss, .modal-close");
+    if (dismiss) {
+      closePlaceModal();
+      return;
+    }
+    if (e.target === modalEl) {
+      closePlaceModal();
+      return;
+    }
+    const detailBtn = e.target.closest(".open-detail, .popup-detail");
+    if (detailBtn) {
+      e.preventDefault();
+      openPlaceModal(detailBtn.dataset.place);
+      return;
+    }
+    const mapBtn = e.target.closest(".map-focus");
+    if (mapBtn) {
+      e.stopPropagation();
+      closePlaceModal();
+      flyToPlace(mapBtn.dataset.place);
+      $("#map-section")?.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+    const card = e.target.closest(".place-card");
+    if (card && !e.target.closest("a, button")) {
+      openPlaceModal(card.dataset.placeId);
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modalEl?.classList.contains("open")) {
+      closePlaceModal();
+      return;
+    }
+    if ((e.key === "Enter" || e.key === " ") && e.target.classList?.contains("place-card")) {
+      e.preventDefault();
+      openPlaceModal(e.target.dataset.placeId);
+    }
   });
 
   // Deep link #place-xxx or #day-N
@@ -384,6 +480,7 @@
         setTimeout(() => {
           document.getElementById(`place-${id}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
           highlightPlace(id);
+          openPlaceModal(id);
         }, 200);
       }
     } else if (h.startsWith("day-")) {
@@ -395,5 +492,5 @@
   handleHash();
 
   // Expose for console / debugging
-  window.FujiGuide = { flyToPlace, showDay, gmapsUrl, embedUrl };
+  window.FujiGuide = { flyToPlace, showDay, gmapsUrl, embedUrl, openPlaceModal, closePlaceModal };
 })();
