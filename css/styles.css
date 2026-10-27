@@ -667,6 +667,13 @@ button { font-family: inherit; cursor: pointer; }
   box-shadow: 0 -8px 40px rgba(0,0,0,0.2);
   animation: fadeUp 0.32s ease;
 }
+#place-modal-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
 @media (min-width: 720px) {
   .modal-backdrop {
     align-items: center;
@@ -737,8 +744,9 @@ button { font-family: inherit; cursor: pointer; }
 .modal-scroll {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 1.15rem 1.35rem 2rem;
-  flex: 1;
+  padding: 1.15rem 1.35rem 1.25rem;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 .modal-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1rem; }
 .modal-section {
@@ -785,12 +793,22 @@ button { font-family: inherit; cursor: pointer; }
   line-height: 1.65;
 }
 .modal-actions {
-  display: flex; flex-wrap: wrap; gap: 0.5rem;
-  margin-top: 0.5rem;
-  position: sticky;
-  bottom: 0;
-  background: linear-gradient(180deg, transparent, var(--card) 28%);
-  padding-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0.85rem 1.35rem calc(0.95rem + env(safe-area-inset-bottom, 0px));
+  background: var(--card);
+  border-top: 1px solid rgba(61,90,115,0.12);
+  box-shadow: 0 -6px 18px rgba(26,35,50,0.06);
+  z-index: 3;
+}
+.modal-actions .btn {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: center;
+  justify-content: center;
 }
 body.modal-open { overflow: hidden; }
 

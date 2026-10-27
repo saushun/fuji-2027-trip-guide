@@ -388,11 +388,11 @@
           <h3>實用提示</h3>
           <div class="modal-tips-box">💡 ${p.tips || ""}</div>
         </div>
-        <div class="modal-actions">
-          <a class="btn btn-primary" href="${gmapsUrl(p)}" target="_blank" rel="noopener">在 Google 地圖開啟</a>
-          <button type="button" class="btn map-focus" data-place="${p.id}">睇地圖標記</button>
-          <button type="button" class="btn modal-dismiss">關閉</button>
-        </div>
+      </div>
+      <div class="modal-actions">
+        <a class="btn btn-primary" href="${gmapsUrl(p)}" target="_blank" rel="noopener">在 Google 地圖開啟</a>
+        <button type="button" class="btn map-focus" data-place="${p.id}">睇地圖標記</button>
+        <button type="button" class="btn modal-dismiss">關閉</button>
       </div>`;
     modalEl.hidden = false;
     modalEl.classList.add("open");
