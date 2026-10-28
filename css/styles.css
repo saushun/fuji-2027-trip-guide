@@ -299,18 +299,13 @@ button { font-family: inherit; cursor: pointer; }
 }
 .lodge-area { font-size: 0.85rem; color: var(--fuji-mist); margin-bottom: 0.5rem; }
 .lodge-confirm {
-  font-size: 0.95rem;
+  font-size: 0.78rem;
   font-family: "SF Mono", "Menlo", "Consolas", "Noto Sans Mono", ui-monospace, monospace;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  line-height: 1.45;
-  color: var(--fuji-ink, #1a2a3a);
   background: var(--paper-deep);
-  padding: 0.4rem 0.65rem;
-  border-radius: 8px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
   display: inline-block;
   margin-bottom: 0.5rem;
-  word-break: break-all;
 }
 .lodge-note { font-size: 0.8rem; color: var(--fuji-blue); margin: 0; }
 .badge {
