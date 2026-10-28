@@ -288,16 +288,6 @@
       tab.addEventListener("click", () => showDay(day.id));
       tabsEl.appendChild(tab);
 
-      const navBtn = document.createElement("button");
-      navBtn.className = "nav-day";
-      navBtn.type = "button";
-      navBtn.textContent = `D${day.id}`;
-      navBtn.addEventListener("click", () => {
-        showDay(day.id);
-        $("#days-section")?.scrollIntoView({ behavior: "smooth" });
-      });
-      $(".nav-links")?.appendChild(navBtn);
-
       const panel = document.createElement("div");
       panel.className = "day-panel" + (idx === 0 ? " active" : "");
       panel.id = `day-panel-${day.id}`;
