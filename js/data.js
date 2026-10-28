@@ -11,7 +11,7 @@ window.TRIP = {
     days: 6,
     nights: 5,
     travelers: ["Sunny", "Helen"],
-    updated: "2026-10-27 23:53",
+    updated: "2026-10-28 12:20",
     note: "行程或會微調；出發前請再確認營業時間同路況。",
     flights: {
       out: { code: "UO646", pnr: "DBY9RQ", from: "HKG T2 13:00", to: "NRT T2 18:05", date: "13/2" },
@@ -62,13 +62,13 @@ window.TRIP = {
       ]
     },
     {
-      night: "15/2（計劃）",
+      night: "15/2",
       name: "Airbnb Cabin G, Weekend House Saiko",
       area: "西湖",
-      address: "1210-3 Saiko",
+      address: "1210-3 Saiko, Fujikawaguchiko",
       confirm: "HM5WBB3CJB",
-      status: "booked-planned-shorten",
-      note: "現訂 CO 17/2 10:00｜計劃縮短至 15→16 一晚（待改訂／未改訂）｜免費取消至 2027-02-10 15:00 JST",
+      status: "booked-revised",
+      note: "CI 15/2 15:00｜CO 16/2 10:00（一晚・已改訂 15→16）｜2 人｜HK$2,067.36｜免費取消至 2027-02-10 15:00 JST｜Hosted by Weekend House Saiko",
       links: [
         { label: "訂房確認 PDF", url: "https://drive.google.com/file/d/13B6BjRRF4Mo2MKSi72n-S2CibGWG0Qwj/view?usp=drivesdk", kind: "drive" },
       ]
@@ -485,12 +485,12 @@ window.TRIP = {
       image: "images/saiko.jpg",
       tags: ["住宿"],
       intro: "西湖邊嘅小木屋風住宿。屋主借鍋同卡式爐，適合自己打邊爐——森林同湖嘅夜晚好靜。",
-      tips: "確認 HM5WBB3CJB｜現訂 CO 17/2｜計劃縮短至 16/2 朝早（待改訂）。廚房煤氣爐；鍋底墊隔熱墊；開抽油煙機。",
+      tips: "確認 HM5WBB3CJB｜CI 15/2 15:00｜CO 16/2 10:00（已改訂 15→16 一晚）｜HK$2,067.36｜廚房煤氣爐；鍋底墊隔熱墊；開抽油煙機。",
       detail: "Weekend House Saiko Cabin G 係西湖邊小木屋風住宿，屋主借鍋同卡式爐，適合自己打邊爐。森林同湖嘅夜晚好靜。",
       history: "西湖沿岸近年多咗獨立小屋同 Airbnb，吸引想自己煮同睇星嘅旅客。",
       origin: "選西湖係為咗同 Day 3 西邊三湖動線吻合，夜晚唔使再長途開車。",
-      stories: "確認 HM5WBB3CJB；現訂 CO 17/2，計劃縮短至 16/2 朝早（待改訂）。廚房用隔熱墊、開抽油煙機。",
-      highlights: ["借鍋＋卡式爐打邊爐", "西湖森林夜靜", "縮短待改訂｜免費取消期留意"],
+      stories: "確認 HM5WBB3CJB；已改訂 15→16（CI 15/2 15:00、CO 16/2 10:00 一晚，HK$2,067.36）。廚房用隔熱墊、開抽油煙機。",
+      highlights: ["借鍋＋卡式爐打邊爐", "西湖森林夜靜", "已改訂 15→16｜免費取消至 2/10"],
       mapsQuery: "1210-3 Saiko Fujikawaguchiko",
       links: [
         { label: "訂房確認 PDF", url: "https://drive.google.com/file/d/13B6BjRRF4Mo2MKSi72n-S2CibGWG0Qwj/view?usp=drivesdk", kind: "drive" },
@@ -615,7 +615,7 @@ window.TRIP = {
       detail: "季之湯雪月花（共立リゾート／Dormy）喺箱根町強羅 1300-34，強羅站附近。已訂日式西式禁煙客房、附露天風呂、36㎡（最多 3 人）；計劃【標準】附晚餐及早餐。2 成人；訂位人 LEUNGSUNNY SAU SHUN；已付 HK$2,698.51（約 ¥54,230 扣券後）。訂房確認 PDF 見 Drive Stay。",
       history: "「雪月花」取日本風雅自然意象為名；共立リゾート喺箱根經營多間溫泉旅館。強羅隨箱根登山鐵道發展成高原溫泉度假地。",
       origin: "全室附檜露天風呂（客室風呂非溫泉），大湯屋用強羅／大涌谷強羅溫泉。選強羅係為咗近站同方便 Day 5 去御殿場。",
-      stories: "Day 4 ~15:00–18:00 CI → 浸溫泉同方案晚餐。Day 5 目標 ~09:00–09:30 CO（正式 11:00）出發去御殿場 Outlet。Airbnb 仍計劃縮短 15→16（HM5WBB3CJB，待改訂）。",
+      stories: "Day 4 ~15:00–18:00 CI → 浸溫泉同方案晚餐。Day 5 目標 ~09:00–09:30 CO（正式 11:00）出發去御殿場 Outlet。Airbnb Cabin G 已改訂 15→16（HM5WBB3CJB）。",
       highlights: ["已訂・強羅", "露天風呂客房", "標準早晚餐", "Rakuten 21315099251796"],
       mapsQuery: "季の湯 雪月花 強羅",
       links: [
@@ -749,7 +749,7 @@ window.TRIP = {
       hero: "images/hakone-shrine.jpg",
       summary: "Airbnb 提早出發入箱根：神社＋蘆之湖 → 午餐待定 → 玻璃之森／彫刻之森／強羅擇 1–2 → 季之湯雪月花 CI（已訂）。",
       timeline: [
-        { time: "~09:00", text: "西湖 Airbnb 提早 CO／出發（現訂仍 CO 17/2 → 縮短待改訂 HM5WBB3CJB）", placeId: "airbnb" },
+        { time: "~09:00", text: "西湖 Airbnb CO（16/2 10:00｜HM5WBB3CJB｜已改訂 15→16）→ 出發箱根", placeId: "airbnb" },
         { time: "~10:30", text: "箱根神社 + 蘆之湖（1–1.5 小時）", placeId: "hakone-shrine" },
         { time: "~12:00", text: "午餐：箱根町／湯本一帶（待定，唔杜撰）", placeId: null },
         { time: "午後", text: "可選：ガラスの森／彫刻の森／強羅公園（揀 1–2）", placeId: "glass" },

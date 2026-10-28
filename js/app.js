@@ -132,6 +132,8 @@
     T.lodging.forEach((l) => {
       let badge = "";
       if (l.status === "booked") badge = '<span class="badge badge-ok">已訂</span>';
+      else if (l.status === "booked-revised")
+        badge = '<span class="badge badge-ok">已改訂 15→16</span>';
       else if (l.status === "booked-planned-shorten")
         badge = '<span class="badge badge-warn">已訂・縮短待改</span>';
       else badge = '<span class="badge badge-tbd">待定</span>';
