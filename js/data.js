@@ -1,6 +1,6 @@
 /**
  * Fuji Five Lakes + Hakone 2027 trip data
- * Coordinates: OpenStreetMap Nominatim (queried 2026-10-27) unless noted.
+ * Coordinates: OpenStreetMap Nominatim (queried 2026-10-27; Daikanzan peak 2026-10-29) unless noted.
  * Known-public / address-approx coords marked with // approx
  */
 window.TRIP = {
@@ -11,7 +11,7 @@ window.TRIP = {
     days: 6,
     nights: 5,
     travelers: ["Sunny", "Helen"],
-    updated: "2026-10-28 12:20",
+    updated: "2026-10-29 17:48",
     note: "行程或會微調；出發前請再確認營業時間同路況。",
     flights: {
       out: { code: "UO646", pnr: "DBY9RQ", from: "HKG T2 13:00", to: "NRT T2 18:05", date: "13/2" },
@@ -539,6 +539,27 @@ window.TRIP = {
       ]
     },
     {
+      id: "daikanzan",
+      name: "大觀山展望台（Mt. Taikan）",
+      nameJa: "大観山展望台",
+      day: 4,
+      lat: 35.1831064,
+      lng: 139.0461623, // Nominatim OSM peak 大観山（queried 2026-10-29）
+      image: "images/hakone-fuji.jpg",
+      tags: ["景點", "主線", "展望"],
+      intro: "箱根／湯河原交界・海拔約 1,015 m 嘅免費展望台。芦ノ湖＋富士山 360°——Day 4 午餐後主線停站，再落強羅 CI。",
+      tips: "由芦ノ湖／元箱根一帶車程約 15–25 分｜アネスト岩田ターンパイク／芦ノ湖大觀 IC｜展望區免費｜冬天結冰／霧／封路可能 → 出發前確認匝道｜湯河原～大觀山～元箱根巴士運休中｜差天氣就跳過直去強羅。",
+      detail: "大觀山展望台喺箱根同湯河原交界一帶，海拔約 1,015 m，晴天可 360° 望芦ノ湖同富士山。展望區免費；旁有 Sky Lounge 歇腳（營業視天氣／封路）。靠車到達，唔好當有巴士。",
+      history: "大觀山係箱根外輪山一帶嘅觀景高點；アネスト岩田ターンパイク（舊箱根ターンパイク）喺芦ノ湖大觀 IC 附近接駁展望區動線，長期係自駕觀景路線。",
+      origin: "選喺湖同外輪山交界嘅高度，令芦ノ湖同富士可以同框；免費展望令自駕旅客易短停。",
+      stories: "冬天結冰／濃霧／匝道封閉時請跳過。巴士線（湯河原～大觀山～元箱根）運休中。慢速、唔急剎；週二通常比週末鬆。",
+      highlights: ["免費 360° 展望", "芦ノ湖＋富士", "靠車｜出發前確認匝道", "巴士運休中"],
+      mapsQuery: "大観山展望台 箱根",
+      links: [
+        { label: "Google Maps（大観山）", url: "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E8%A6%B3%E5%B1%B1%E5%B1%95%E6%9C%9B%E5%8F%B0%20%E7%AE%B1%E6%A0%B9", kind: "ref" },
+      ]
+    },
+    {
       id: "glass",
       name: "箱根ガラスの森美術館",
       nameJa: "箱根ガラスの森美術館",
@@ -547,8 +568,8 @@ window.TRIP = {
       lng: 139.0176734,
       image: "images/glass-forest.jpg",
       tags: ["景點", "可選"],
-      intro: "仙石原嘅威尼斯玻璃庭園美術館。冬天以室內展為主，暖和又靚，適合雪／凍天。",
-      tips: "時間／休館出發前確認。下午景點揀 1–2 個即可。",
+      intro: "仙石原嘅威尼斯玻璃庭園美術館。冬天以室內展為主——Day 4 下午可選（時間夠／大觀山跳過先考慮）。",
+      tips: "可選｜時間／休館出發前確認。唔當必去。",
       detail: "箱根ガラスの森美術館喺仙石原，以威尼斯玻璃同庭園裝置著名（結晶拱廊等）。冬天以室內展為主，暖和又靚，適合凍天。",
       history: "美術館將意大利威尼斯玻璃工藝同箱根高原風景結合，户外有大型玻璃裝置同歐風建築，成為箱根代表性文化景點之一。",
       origin: "仙石原開闊草地同高原光線適合户外玻璃雕塑同散步。",
@@ -567,9 +588,9 @@ window.TRIP = {
       lat: 35.2442838,
       lng: 139.0520834,
       image: "images/hakone-open-air.jpg",
-      tags: ["景點", "可選"],
-      intro: "二ノ平戶外雕塑公園，現代藝術散落山林。天晴行開闊草地最舒服；落雪／落雨可改走室內館。",
-      tips: "冬季時間出發前確認。着行山鞋。",
+      tags: ["景點", "低優先", "可選"],
+      intro: "二ノ平戶外雕塑公園——Day 4 低優先（Sunny／Helen 興趣一般）。天晴有餘閒先考慮；雪／雨／趕 CI 就跳過。",
+      tips: "低優先｜冬季時間出發前確認｜着行山鞋｜唔當必去。",
       detail: "彫刻の森美術館喺二ノ平，係日本早期大型户外雕塑公園之一。現代雕塑散落山林草地；天晴行開闊區最舒服，落雪／落雨可走室內館。",
       history: "1969 年 8 月 1 日開館，以自然同現代雕塑共生為理念，其後增建畢加索館等。2009 年開館 40 周年推出「ネットの森」（Woods of Net）：堀内紀子手編彩色網同手塚貴晴＋手塚由比木造穹頂合作，屬可進入體驗嘅遊戯雕塑（一般限小學生以下入網玩）。",
       origin: "選箱根山林，係想讓雕塑「呼吸」喺真實風景入面，而唔係只困喺白盒子展廳。",
@@ -589,8 +610,8 @@ window.TRIP = {
       lng: 139.0452490,
       image: "images/gora-park.jpg",
       tags: ["景點", "可選"],
-      intro: "溫室同庭園並存嘅強羅經典公園。若酒店近強羅，下午嚟散步剛剛好。",
-      tips: "冬季開放時間出發前確認。",
+      intro: "溫室同庭園並存嘅強羅經典公園。近雪月花——Day 4 下午可選短停。",
+      tips: "可選｜冬季開放時間出發前確認｜唔當必去。",
       detail: "強羅公園係日本早期法式對稱庭園之一，中央噴水池、花壇同溫室並存。若酒店近強羅，下午嚟散步剛剛好。",
       history: "1914 年開園，由造園家一色七五郎設計，被視為日本首座正式法國式庭園之一。園內用箱根當地火山岩點景；1979 年起陸續設熱帶植物館等溫室。",
       origin: "強羅隨箱根登山鐵道發展成高原度假地，公園為住客同旅客提供歐風庭園體驗。",
@@ -599,6 +620,27 @@ window.TRIP = {
       mapsQuery: "強羅公園",
       links: [
         { label: "官方網站", url: "https://www.hakonenavi.jp/gorapark/", kind: "official" },
+      ]
+    },
+    {
+      id: "owakudani",
+      name: "大涌谷／空中纜車",
+      nameJa: "大涌谷",
+      day: 4,
+      lat: 35.2425,
+      lng: 139.0195, // approx Owakudani crater area
+      image: "images/hakone-fuji.jpg",
+      tags: ["景點", "可選"],
+      intro: "火山谷同空中纜車——Day 4 可選。冬天常因火山氣體或強風停駛；唔寫死。",
+      tips: "可選｜天氣＋火山氣體許可先去｜優先早雲山／強羅側｜2027-01-12～02-26 桃源台～大涌谷段停開改代行巴士｜出發前睇箱根觀光交通狀況。",
+      detail: "大涌谷係箱根活火山活動區觀光景點，空中纜車連接早雲山／大涌谷／桃源台。冬天常因火山氣體或強風停駛；2027 年 1–2 月桃源台～大涌谷段有代行巴士安排，列為可選。",
+      history: "大涌谷係箱根火山後カルデラ活動區；觀光開發同纜車令火山景觀成為箱根經典行程之一，同時受火山氣體同強風規管。",
+      origin: "選可選而非主線，係因為冬季營運不穩定，唔想趕 CI。",
+      stories: "2027-01-12～02-26 桃源台～大涌谷段停開改代行巴士。優先由早雲山／強羅側接近；差天氣就跳過。",
+      highlights: ["可選／天氣許可", "桃源台段代行巴士", "優先早雲山／強羅側"],
+      mapsQuery: "大涌谷",
+      links: [
+        { label: "箱根空中纜車", url: "https://www.hakoneropeway.co.jp/", kind: "official" },
       ]
     },
     {
@@ -745,19 +787,20 @@ window.TRIP = {
       id: 4,
       date: "16/2（二）",
       title: "箱根全日 + 溫泉過夜",
-      subtitle: "神社、蘆之湖、季之湯雪月花",
+      subtitle: "神社、大觀山、季之湯雪月花",
       hero: "images/hakone-shrine.jpg",
-      summary: "Airbnb 提早出發入箱根：神社＋蘆之湖 → 午餐待定 → 玻璃之森／彫刻之森／強羅擇 1–2 → 季之湯雪月花 CI（已訂）。",
+      summary: "Airbnb 提早出發入箱根：神社＋蘆之湖 → 午餐待定 → 大觀山展望台（主線）→ 季之湯雪月花 CI（已訂）。彫刻の森低優先；玻璃之森／強羅公園／大涌谷可選。",
       timeline: [
         { time: "~09:00", text: "西湖 Airbnb CO（16/2 10:00｜HM5WBB3CJB｜已改訂 15→16）→ 出發箱根", placeId: "airbnb" },
-        { time: "~10:30", text: "箱根神社 + 蘆之湖（1–1.5 小時）", placeId: "hakone-shrine" },
-        { time: "~12:00", text: "午餐：箱根町／湯本一帶（待定，唔杜撰）", placeId: null },
-        { time: "午後", text: "可選：ガラスの森／彫刻の森／強羅公園（揀 1–2）", placeId: "glass" },
-        { time: "午後", text: "大涌谷／空中纜車僅天氣＋火山氣體許可（常停駛，唔寫死）", placeId: null },
+        { time: "~10:30–12:00", text: "箱根神社 + 蘆之湖（1–1.5 小時）", placeId: "hakone-shrine" },
+        { time: "~12:00–13:00", text: "午餐：箱根町／元箱根／湯本一帶（待定，唔杜撰）", placeId: null },
+        { time: "~13:00–14:30", text: "大觀山展望台（主線｜免費｜靠車；結冰／封路就跳過）", placeId: "daikanzan" },
+        { time: "~14:30–15:00", text: "車往強羅（約 20–40 分）", placeId: null },
         { time: "~15:00–18:00", text: "季之湯雪月花 CI（Rakuten 21315099251796｜強羅）→ 浸溫泉", placeId: "hakone-hotel" },
-        { time: "晚", text: "晚餐：雪月花方案內含（標準晚餐）", placeId: "hakone-hotel" }
+        { time: "晚", text: "晚餐：雪月花方案內含（標準晚餐）", placeId: "hakone-hotel" },
+        { time: "備選", text: "可選：ガラスの森／強羅公園／大涌谷（桃源台段代行巴士 1/12–2/26）；彫刻の森＝低優先", placeId: "glass" }
       ],
-      transport: "國道 139 → 富士吉田 IC → 東富士五湖道路 → 箱根｜約 1.5–2 小時｜要 ETC｜山路冬天可能結冰，雪胎必備。"
+      transport: "國道 139 → 富士吉田 IC → 東富士五湖道路 → 箱根｜約 1.5–2 小時｜要 ETC｜山路冬天可能結冰，雪胎必備｜大觀山經ターンパイク／芦ノ湖大觀 IC。"
     },
     {
       id: 5,
