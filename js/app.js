@@ -30,6 +30,31 @@
     return `https://www.google.com/maps/search/?api=1&query=${q}`;
   }
 
+  function placePoint(place) {
+    if (!place) return null;
+    if (place.lat != null && place.lng != null) return `${place.lat},${place.lng}`;
+    const q = place.mapsQuery || place.name;
+    return q ? encodeURIComponent(q) : null;
+  }
+
+  /** Google Maps driving directions between two places */
+  function gmapsDirectionsUrl(from, to) {
+    const o = placePoint(from);
+    const d = placePoint(to);
+    if (!o || !d) return null;
+    return `https://www.google.com/maps/dir/?api=1&origin=${o}&destination=${d}&travelmode=driving`;
+  }
+
+  function nextTimelinePlace(timeline, fromIndex) {
+    for (let j = fromIndex + 1; j < timeline.length; j++) {
+      const id = timeline[j].placeId;
+      if (!id) continue;
+      const p = placeById(id);
+      if (p) return p;
+    }
+    return null;
+  }
+
   function embedUrl(place) {
     return `https://maps.google.com/maps?q=${place.lat},${place.lng}&z=14&output=embed`;
   }
@@ -350,8 +375,23 @@
         <div class="transport-note">🚗 ${day.transport}</div>
         <ul class="timeline">
           ${day.timeline
-            .map(
-              (t) => `
+            .map((t, i) => {
+              const cur = t.placeId ? placeById(t.placeId) : null;
+              const nxt = nextTimelinePlace(day.timeline, i);
+              const dirUrl =
+                cur && nxt && gmapsDirectionsUrl(cur, nxt)
+                  ? gmapsDirectionsUrl(cur, nxt)
+                  : null;
+              const navHtml = dirUrl
+                ? `<li class="tl-nav" aria-label="導航至下一站">
+              <div class="tl-time"></div>
+              <div class="tl-nav-rail"></div>
+              <div class="tl-nav-body">
+                <a class="tl-nav-link" href="${dirUrl}" target="_blank" rel="noopener">🚗 導航至下一站：${nxt.name} →</a>
+              </div>
+            </li>`
+                : "";
+              return `
             <li class="tl-item">
               <div class="tl-time">${t.time}</div>
               <div class="tl-dot"></div>
@@ -363,8 +403,8 @@
                     : ""
                 }
               </div>
-            </li>`
-            )
+            </li>${navHtml}`;
+            })
             .join("")}
         </ul>
         <div class="cards-grid day-cards">${cardsHtml}</div>`;
@@ -594,5 +634,5 @@
   handleHash();
 
   // Expose for console / debugging
-  window.FujiGuide = { flyToPlace, showDay, gmapsUrl, embedUrl, openPlaceModal, closePlaceModal };
+  window.FujiGuide = { flyToPlace, showDay, gmapsUrl, gmapsDirectionsUrl, embedUrl, openPlaceModal, closePlaceModal };
 })();
