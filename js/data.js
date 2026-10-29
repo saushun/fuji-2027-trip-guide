@@ -1,6 +1,6 @@
 /**
  * Fuji Five Lakes + Hakone 2027 trip data
- * Coordinates: OpenStreetMap Nominatim (queried 2026-10-27; Daikanzan peak 2026-10-29) unless noted.
+ * Coordinates: OpenStreetMap Nominatim (queried 2026-10-27; Daikanzan peak 2026-10-29; Ikiiki approx via 道の駅なるさわ 2026-10-29) unless noted.
  * Known-public / address-approx coords marked with // approx
  */
 window.TRIP = {
@@ -11,7 +11,7 @@ window.TRIP = {
     days: 6,
     nights: 5,
     travelers: ["Sunny", "Helen"],
-    updated: "2026-10-29 17:48",
+    updated: "2026-10-29 21:35",
     note: "行程或會微調；出發前請再確認營業時間同路況。",
     flights: {
       out: { code: "UO646", pnr: "DBY9RQ", from: "HKG T2 13:00", to: "NRT T2 18:05", date: "13/2" },
@@ -392,6 +392,28 @@ window.TRIP = {
       mapsQuery: "彩呼亭 西湖"
     },
     {
+      id: "ikiiki",
+      name: "鳴沢村活き活き広場",
+      nameJa: "鳴沢村活き活き広場",
+      day: 3,
+      // approx — next to 道の駅なるさわ (Nominatim way 168574418; plaza itself not named in OSM)
+      lat: 35.4780101,
+      lng: 138.6922443,
+      image: "images/oishi-park.jpg",
+      tags: ["景點", "富士展望"],
+      intro: "道の駅なるさわ旁邊嘅望富士草坪廣場。散客行下影相免費；有遊具、健康遊具同展望台。Helen 想去，排喺彩呼亭午餐後、富岳風穴前。",
+      tips: "鳴沢 8531-45｜散客免費（團體包場要申請／村外計時收費）｜泊車約 175 位（鄰接道の駅）｜禁止：寵物、球技、車入草、火氣｜電話 0555-85-2311｜約 30–45 分",
+      detail: "面積約 24,000 m² 平坦草坪，正面可望富士。有大型複合遊具、健康遊具、展望台（最高約 5.8 m）。廁所／水道喺鄰接停車場。",
+      history: "鳴沢村村營多目的芝生廣場，鄰接道の駅なるさわ，係村民同旅客休息、親子活動嘅開闊空間。",
+      origin: "選喺國道 139 同道の駅旁邊，方便西邊三湖動線中途落車望富士。",
+      stories: "散客行下影相免費；團體／包場先要村総務課許可。唔帶寵物、唔玩球、唔駛車入草。跟住順路去富岳風穴。",
+      highlights: ["望富士草坪＋展望台", "散客免費｜遊具／健康遊具", "道の駅なるさわ旁邊"],
+      mapsQuery: "鳴沢村活き活き広場",
+      links: [
+        { label: "村官方設施頁", url: "https://www.vill.narusawa.yamanashi.jp/gyosei/soshikikarasagasu/somuka/shisetsu/1/477.html", kind: "official" },
+      ]
+    },
+    {
       id: "fugaku",
       name: "富岳風穴",
       nameJa: "富岳風穴",
@@ -401,7 +423,7 @@ window.TRIP = {
       image: "images/wind-cave.jpg",
       tags: ["景點", "洞窟"],
       intro: "溶岩洞窟，打橫平路易行。冬天洞內冰柱係招牌景色，溫度常年低，入去要加件褸。",
-      tips: "門票同冬季時間出發前確認。地面可能濕滑。同青木ヶ原樹海相連區域。",
+      tips: "門票同冬季時間出發前確認。地面可能濕滑。同青木ヶ原樹海相連區域。由活き活き広場順路。",
       detail: "富岳風穴係青木ヶ原樹海底下嘅溶岩隧道，長約 201 米、高約 8.7 米，洞內常年約 3°C。冬天冰柱係招牌，平路相對易行（仍有低天花同濕滑位）。",
       history: "公元 864 年富士山貞觀大噴火嘅熔岩流造就青木ヶ原同多條風穴／氷穴。富岳風穴 1929 年列為天然記念物。江戶至昭和初期，洞內用作天然雪櫃，貯蠶種、種子同冰塊；約至 1950 年代中仍有實用貯藏。玄武岩多孔壁吸音，所以洞內幾乎無回聲。",
       origin: "「富岳」係富士山雅稱，「風穴」指空氣流通嘅溶岩洞——充足換氣令古時可以長期冷藏。",
@@ -768,15 +790,16 @@ window.TRIP = {
       id: 3,
       date: "15/2（一）",
       title: "西邊三湖 → 西湖",
-      subtitle: "根場、蕎麥、風穴、本栖",
+      subtitle: "根場、蕎麥、活き活き広場、風穴、本栖",
       hero: "images/motosu.jpg",
-      summary: "退房後西行：咖啡 → 根場 → 彩呼亭 → 富岳風穴 → 精進／本栖 → 超市買火鍋料 → Airbnb 打邊爐。",
+      summary: "退房後西行：咖啡 → 根場 → 彩呼亭 → 鳴沢活き活き広場 → 富岳風穴 → 精進／本栖 → 超市買火鍋料 → Airbnb 打邊爐。",
       timeline: [
         { time: "朝", text: "Mizno 睇日出｜房內食富士山食パン＋便利店", placeId: "mizno" },
         { time: "11:00", text: "Mizno check-out → L'ESSENCE", placeId: "lessence" },
         { time: "11:30", text: "西湖いやしの里根場", placeId: "nenba" },
         { time: "~13:30", text: "午餐 彩呼亭（提前電話留麵）", placeId: "saikotei" },
-        { time: "午後", text: "富岳風穴（冬天冰柱）", placeId: "fugaku" },
+        { time: "~14:30–15:15", text: "鳴沢村活き活き広場（望富士草坪｜散客免費）", placeId: "ikiiki" },
+        { time: "午後", text: "富岳風穴（冬天冰柱｜廣場附近順路）", placeId: "fugaku" },
         { time: "午後", text: "精進湖 他手合浜 → 本栖湖", placeId: "motosu" },
         { time: "~17:00", text: "Forest Mall 買打邊爐料 → Airbnb CI", placeId: "airbnb" },
         { time: "晚", text: "🍲 打邊爐（借鍋＋卡式爐；墊隔熱墊；開抽油煙機）", placeId: "airbnb" }
