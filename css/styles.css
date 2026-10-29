@@ -255,10 +255,18 @@ button { font-family: inherit; cursor: pointer; }
   display: flex; align-items: center; justify-content: center;
   animation: pulse-soft 2.8s ease-in-out infinite;
 }
+.fuji-marker.fuji-marker-ord {
+  width: 36px; height: 36px;
+}
 .fuji-marker span {
   transform: rotate(45deg);
   font-size: 0.65rem;
   font-weight: 700;
+}
+.fuji-marker.fuji-marker-ord span {
+  font-size: 0.58rem;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 .fuji-marker.day-tbd { background: var(--warm-deep); }
 @keyframes pulse-soft {

@@ -179,6 +179,25 @@
       ${metaLinks ? `<div class="info-card reveal"><h3>📎 行程資料</h3>${metaLinks}</div>` : ""}`;
   }
 
+
+  /* Visit order within each day (from timeline placeId first-seen) */
+  function buildVisitOrder() {
+    const order = {}; // placeId -> { day, seq, label }
+    (T.days || []).forEach((day) => {
+      let seq = 0;
+      const seen = new Set();
+      (day.timeline || []).forEach((t) => {
+        const id = t.placeId;
+        if (!id || seen.has(id)) return;
+        seen.add(id);
+        seq += 1;
+        order[id] = { day: day.id, seq, label: `${day.id}·${seq}` };
+      });
+    });
+    return order;
+  }
+  const visitOrder = buildVisitOrder();
+
   /* —— Leaflet map —— */
   let map, markers = {};
   function initMap() {
@@ -202,17 +221,20 @@
     T.places.forEach((p) => {
       if (!p.lat || !p.lng) return;
       const isTbd = (p.tags || []).includes("TBD");
+      const vo = visitOrder[p.id];
+      const tagLabel = vo ? vo.label : `D${p.day}`;
+      const orderNote = vo ? `第 ${vo.seq} 站 · Day ${vo.day}` : `Day ${p.day}`;
       const icon = L.divIcon({
         className: "",
-        html: `<div class="fuji-marker${isTbd ? " day-tbd" : ""}"><span>D${p.day}</span></div>`,
-        iconSize: [28, 28],
-        iconAnchor: [14, 28],
-        popupAnchor: [0, -28],
+        html: `<div class="fuji-marker fuji-marker-ord${isTbd ? " day-tbd" : ""}"><span>${tagLabel}</span></div>`,
+        iconSize: [36, 36],
+        iconAnchor: [18, 36],
+        popupAnchor: [0, -36],
       });
       const m = L.marker([p.lat, p.lng], { icon }).addTo(map);
       m.bindPopup(`
         <div class="popup-title">${p.name}</div>
-        <div class="popup-day">Day ${p.day}</div>
+        <div class="popup-day">${orderNote}</div>
         <div style="font-size:0.82rem;margin-bottom:0.4rem">${(p.intro || "").slice(0, 80)}…</div>
         <button type="button" class="popup-link popup-detail" data-place="${p.id}" style="background:none;border:none;padding:0;color:inherit;text-decoration:underline;cursor:pointer;font:inherit">打開完整導覽 →</button><br>
         <a class="popup-link" href="${gmapsUrl(p)}" target="_blank" rel="noopener">在 Google 地圖開啟</a>
