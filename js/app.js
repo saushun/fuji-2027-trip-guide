@@ -180,18 +180,34 @@
   }
 
 
-  /* Visit order within each day (from timeline placeId first-seen) */
+  /* Visit order: timeline first, then leftover places that day (by data.js order) */
   function buildVisitOrder() {
     const order = {}; // placeId -> { day, seq, label }
+    const byDay = {};
+    (T.places || []).forEach((p) => {
+      if (!p || p.day == null) return;
+      (byDay[p.day] || (byDay[p.day] = [])).push(p.id);
+    });
     (T.days || []).forEach((day) => {
       let seq = 0;
       const seen = new Set();
-      (day.timeline || []).forEach((t) => {
-        const id = t.placeId;
+      const add = (id) => {
         if (!id || seen.has(id)) return;
         seen.add(id);
         seq += 1;
         order[id] = { day: day.id, seq, label: `${day.id}·${seq}` };
+      };
+      (day.timeline || []).forEach((t) => add(t.placeId));
+      (byDay[day.id] || []).forEach(add);
+    });
+    // places with day but no matching T.days entry
+    Object.keys(byDay).forEach((d) => {
+      (byDay[d] || []).forEach((id) => {
+        if (order[id]) return;
+        const dayNum = +d;
+        const used = Object.values(order).filter((o) => o.day === dayNum).length;
+        const seq = used + 1;
+        order[id] = { day: dayNum, seq, label: `${dayNum}·${seq}` };
       });
     });
     return order;
