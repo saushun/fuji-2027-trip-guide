@@ -1,6 +1,6 @@
 /**
  * Fuji Five Lakes + Hakone 2027 trip data
- * Coordinates: OpenStreetMap Nominatim (queried 2026-10-27; Daikanzan peak 2026-10-29; Ikiiki approx via 道の駅なるさわ 2026-10-29) unless noted.
+ * Coordinates: OpenStreetMap Nominatim (queried 2026-10-27; Daikanzan peak 2026-10-29; Ikiiki approx via 道の駅なるさわ 2026-10-29; Kuramae stops 2026-10-29) unless noted.
  * Known-public / address-approx coords marked with // approx
  */
 window.TRIP = {
@@ -11,7 +11,7 @@ window.TRIP = {
     days: 6,
     nights: 5,
     travelers: ["Sunny", "Helen"],
-    updated: "2026-10-29 21:50",
+    updated: "2026-10-29 22:20",
     note: "行程或會微調；出發前請再確認營業時間同路況。",
     flights: {
       out: { code: "UO646", pnr: "DBY9RQ", from: "HKG T2 13:00", to: "NRT T2 18:05", date: "13/2" },
@@ -731,22 +731,109 @@ window.TRIP = {
       ]
     },
     {
-      id: "tokyo-chill",
-      name: "東京 Chill Day",
-      nameJa: "東京",
+      id: "bark-kuramae",
+      name: "Bark Bake & Roast",
+      nameJa: "Bark Bake & Roast",
       day: 6,
-      lat: 35.6897,
-      lng: 139.6922,
+      lat: 35.70465,
+      lng: 139.79206, // approx Kuramae 3-13-4 (research 2026-10-29)
+      image: "images/cafe-coffee.jpg",
+      tags: ["早餐", "咖啡", "蔵前"],
+      intro: "蔵前嘅烘焙 café，適合 check-out 後第一站補能量。平日朝早開，星期四通常有開。",
+      tips: "蔵前 3-13-4｜平日約 08:00 起；星期四通常開至 ~17:00｜出發前確認｜未訂。可配合酒店暫存行李後空手過嚟。",
+      detail: "Bark Bake & Roast 喺蔵前站附近，賣烘焙同輕食咖啡，適合最後一日朝早慢慢起步，再行去巧克力店同文具街。",
+      history: "蔵前由舊時米倉／批發區轉成手作同咖啡密集嘅街區；獨立烘焙店係呢波復興嘅一部分。",
+      origin: "選近蔵前站，方便大江戸線落車就食。",
+      stories: "注意：同區一啲網紅咖啡（如 Coffee Wrights 蔵前）星期四休——所以早餐揀 Bark 較穩。",
+      highlights: ["蔵前朝早烘焙", "星期四通常開", "近駅步行"],
+      mapsQuery: "Bark Bake Roast Kuramae",
+      links: [
+        { label: "Instagram", url: "https://www.instagram.com/bark_kuramae/", kind: "ref" },
+      ]
+    },
+    {
+      id: "dandelion-kuramae",
+      name: "Dandelion Chocolate 蔵前",
+      nameJa: "ダンデライオン・チョコレート 蔵前",
+      day: 6,
+      lat: 35.7039,
+      lng: 139.7895, // approx 蔵前4-14-6
+      image: "images/cafe-coffee.jpg",
+      tags: ["咖啡", "甜品", "蔵前"],
+      intro: "日本一號店：工場＋café。近距離睇 bean-to-bar，歎熱朱古力——今日主 café。",
+      tips: "蔵前 4-14-6｜10:00–19:00｜電話 03-5833-7270｜無停車場｜未訂。",
+      detail: "Dandelion Chocolate ファクトリー&カフェ蔵前係美國品牌喺日本嘅第一間店，工廠同咖啡座並存，適合慢慢坐、買伴手禮。",
+      history: "Dandelion 以小批量 bean-to-bar 聞名；蔵前店將製造過程開放畀客人睇，成為文青區地標之一。",
+      origin: "選蔵前係因為手作街區氛圍同工場空間合適。",
+      stories: "菜單隨當造可可豆變；冬天熱朱古力特別啱。Sunny 習慣約 1 café／日——今日就係呢度。",
+      highlights: ["工場＋café", "10:00–19:00", "今日主 café"],
+      mapsQuery: "Dandelion Chocolate Kuramae",
+      links: [
+        { label: "官方網站", url: "https://dandelionchocolate.jp/pages/factory-cafe-kuramae", kind: "official" },
+      ]
+    },
+    {
+      id: "kakimori",
+      name: "Kakimori（カキモリ）",
+      nameJa: "カキモリ",
+      day: 6,
+      lat: 35.70319139,
+      lng: 139.78567722,
       image: "images/tokyo-chill.jpg",
-      tags: ["悠閒"],
-      intro: "還咗車之後，最後一日留喺東京輕輕鬆鬆：靚早餐、坐低午餐、一間 café——然後準時去機場。",
-      tips: "店名全部 placeholder，未訂唔杜撰。目標 14:00–15:00 離開市區，16:00–17:00 到 NRT T2。建議 JR N'EX 或京成 Skyliner／Access。",
-      detail: "還車後最後一日留喺東京輕輕鬆鬆：靚早餐、坐低午餐、一間 café，然後準時去機場。店名全部 placeholder，未訂唔杜撰。",
-      history: "新宿西口都廳同中央公園一帶，係都心少有嘅高樓＋公園組合，適合唔趕時間嘅散步同咖啡。",
-      origin: "住返 Kadoya 後唔使再揸車，用鐵道時間換悠閒。",
-      stories: "目標 14:00–15:00 離開市區，16:00–17:00 到 NRT T2。建議 JR N'EX 或京成。bag drop 18:00 硬 deadline。",
-      highlights: ["無車日悠閒", "預留去機場 buffer", "店名未訂唔杜撰"],
-      mapsQuery: "Shinjuku Tokyo"
+      tags: ["設計店", "蔵前"],
+      intro: "訂製筆記同文具名店——蔵前文青區嘅代表舖。平日較鬆，可順路睇其他手作店。",
+      tips: "三筋 1-6-2｜火–日 11:00–18:00｜月曜休 → 星期四 OK｜訂製筆記平日通常免預約｜未訂、唔強迫消費。",
+      detail: "Kakimori 賣鋼筆、墨水同可自選封面／紙張／裝訂嘅訂製筆記；樓上 Inkstand 可調配專屬墨色（多要預約）。",
+      history: "2010 年開業，係蔵前由批發街轉型為手作／設計目的地嘅早期標記之一；2017 年遷現址。",
+      origin: "「たのしく、書く人」——用寫字體驗帶動街區散步。",
+      stories: "週末較擠；星期四平日剛好。時間夠可附近行 MAITO 等天然染／生活雜貨店。",
+      highlights: ["訂製筆記", "火–日營業｜月休", "手作街散步起點"],
+      mapsQuery: "Kakimori Kuramae Misuji",
+      links: [
+        { label: "官方網站", url: "https://kakimori.com/", kind: "official" },
+      ]
+    },
+    {
+      id: "cielo-y-rio",
+      name: "Cielo y Rio（シエロイリオ）",
+      nameJa: "シエロイリオ",
+      day: 6,
+      lat: 35.7025,
+      lng: 139.7930, // approx 蔵前2-15-5 MIRROR riverside
+      image: "images/tokyo-chill.jpg",
+      tags: ["午餐", "蔵前"],
+      intro: "隅田川畔義式／bistro，窗邊可望晴空塔。最後一日坐低午餐首選。",
+      tips: "蔵前 2-15-5｜平日午餐約 11:30–15:00｜無休｜未訂｜冬天偏室內窗邊。後備：区内拉麵／定食。",
+      detail: "Cielo y Rio（西班牙文「天同河」）喺蔵前河畔複合設施 MIRROR，午餐有沙律、義式同輕食；三樓窗景開闊。",
+      history: "蔵前河岸近年活化，餐飲面向河同晴空塔景觀，成為半日遊嘅午餐錨點。",
+      origin: "選呢度係為咗午餐後可直接落河岸／蔵前橋散步。",
+      stories: "平日相對週末鬆；起飛日唔好叫太慢嘅 course——坐低歎完準時行。",
+      highlights: ["河景＋晴空塔", "平日午餐", "食完即散步"],
+      mapsQuery: "Cielo y Rio Kuramae",
+      links: [
+        { label: "Google Maps", url: "https://www.google.com/maps/search/?api=1&query=Cielo%20y%20Rio%20Kuramae", kind: "ref" },
+      ]
+    },
+    {
+      id: "kuramae-bridge",
+      name: "蔵前橋／隅田川",
+      nameJa: "蔵前橋",
+      day: 6,
+      lat: 35.7009369,
+      lng: 139.7934913,
+      image: "images/tokyo-chill.jpg",
+      tags: ["景點", "蔵前"],
+      intro: "金色拱橋跨隅田川，望晴空塔。午餐後短停 20–30 分，再出發去機場。",
+      tips: "24 小時可通行｜免費｜浅草線蔵前駅約 6 分｜風大着暖。",
+      detail: "蔵前橋 1927 年建成，三跨金色拱橋；欄杆有相撲圖案。晴天可由橋望東京晴空塔同河面。",
+      history: "關東大震災後復興橋梁之一，係隅田川經典風景。",
+      origin: "蔵前半日遊嘅收尾——用河風換一口大氣，再轉車站去 NRT。",
+      stories: "唔使行好遠；影完相視行李方案返新宿拎袋或直去浅草線／京成。",
+      highlights: ["望晴空塔", "短停即可", "近駅去機場"],
+      mapsQuery: "蔵前橋",
+      links: [
+        { label: "GO TOKYO", url: "https://www.gotokyo.org/en/spot/931/index.html", kind: "ref" },
+      ]
     }
   ],
 
@@ -845,17 +932,22 @@ window.TRIP = {
     {
       id: 6,
       date: "18/2（四）",
-      title: "東京 chill → NRT → 香港",
-      subtitle: "唔揸車，慢慢返",
-      hero: "images/shinjuku.jpg",
-      summary: "Kadoya CO → 東京早餐／午餐／café → 下午出發去成田，晚上飛返香港。成田市方案僅後備。",
+      title: "蔵前 → NRT → 香港",
+      subtitle: "文青半日，準時起飛",
+      hero: "images/tokyo-chill.jpg",
+      summary: "Kadoya CO → 蔵前（Bark 早餐 → Dandelion café → Kakimori → Cielo y Rio 午餐 → 蔵前橋）→ ~14:30–15:00 去 NRT。行李預設酒店暫存（要問前台）；成田市僅後備。",
       timeline: [
-        { time: "朝", text: "Kadoya check-out → 靚早餐（placeholder，未訂）", placeId: "kadoya" },
-        { time: "午", text: "東京坐低午餐（未訂）＋一間 chill café（未訂）", placeId: "tokyo-chill" },
-        { time: "~14:00–15:00", text: "離開市區 → 目標 16:00–17:00 到 NRT T2", placeId: "nrt" },
-        { time: "19:00", text: "UO647 起飛 → 23:25 抵 HKG T1", placeId: "nrt" }
+        { time: "~09:00", text: "Kadoya CO｜行李：預設問酒店暫存（A）；或 locker／前晚寄 NRT｜輕早餐可酒店附近", placeId: "kadoya" },
+        { time: "~09:15–09:45", text: "都營大江戸線 新宿 → 蔵前（E-11）約 20–25 分", placeId: "bark-kuramae" },
+        { time: "~09:45–10:45", text: "Bark Bake & Roast 早餐（木通常開；出發前確認）", placeId: "bark-kuramae" },
+        { time: "~10:45–11:45", text: "Dandelion Chocolate 蔵前（今日主 café｜10:00–19:00）", placeId: "dandelion-kuramae" },
+        { time: "~11:45–12:30", text: "Kakimori＋手作街散步（火–日；月休）", placeId: "kakimori" },
+        { time: "~12:30–13:45", text: "午餐 Cielo y Rio（河景／晴空塔｜未訂）", placeId: "cielo-y-rio" },
+        { time: "~13:45–14:15", text: "蔵前橋／隅田川短停 →（走 A 就返新宿拎行李）", placeId: "kuramae-bridge" },
+        { time: "~14:30–15:00", text: "出發去機場｜目標 16:00–17:00 到 NRT T2", placeId: "nrt" },
+        { time: "19:00", text: "UO647 起飛 → 23:25 抵 HKG T1｜bag drop 18:00 硬 deadline", placeId: "nrt" }
       ],
-      transport: "建議 JR N'EX 新宿→空港第2ビル（約 75–90 分）或京成經日暮里。bag drop 18:00 硬 deadline。"
+      transport: "去程：大江戸線新宿→蔵前。回機場：浅草線蔵前→Access Express／經日暮里 Skyliner；或返新宿拎行李後 N'EX。bag drop 18:00 硬 deadline。行李：A 酒店暫存（要問）／B locker／C 前晚空港宅急便／D 只帶登機。"
     }
   ],
 
@@ -867,6 +959,7 @@ window.TRIP = {
     { id: "hakone-shrine", label: "箱根" },
     { id: "gotemba", label: "御殿場" },
     { id: "kadoya", label: "新宿" },
+    { id: "kuramae-bridge", label: "蔵前" },
     { id: "nrt", label: "NRT" }
   ]
 };
