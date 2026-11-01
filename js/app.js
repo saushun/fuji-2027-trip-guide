@@ -136,6 +136,34 @@
     });
   }
 
+  /* —— Todos checklist —— */
+  const todoEl = $("#todo-list");
+  if (todoEl && T.todos) {
+    const open = T.todos.open || [];
+    const done = T.todos.done || [];
+    const itemHtml = (item, checked) => {
+      const meta = item.meta
+        ? `<span class="todo-meta">${item.meta}</span>`
+        : "";
+      return `<li class="todo-item${checked ? " is-done" : ""}">
+        <label>
+          <input type="checkbox" ${checked ? "checked" : ""} disabled>
+          <span class="todo-text">${item.text}</span>
+        </label>
+        ${meta}
+      </li>`;
+    };
+    todoEl.innerHTML = `
+      <div class="todo-group reveal">
+        <h3>未完成 <span class="todo-count">${open.length}</span></h3>
+        <ul class="todo-ul">${open.map((i) => itemHtml(i, false)).join("") || "<li class='todo-empty'>冇未完成項目 🎉</li>"}</ul>
+      </div>
+      <div class="todo-group todo-group-done reveal">
+        <h3>已完成 <span class="todo-count">${done.length}</span></h3>
+        <ul class="todo-ul">${done.map((i) => itemHtml(i, true)).join("")}</ul>
+      </div>`;
+  }
+
   /* —— Lodging —— */
   const lodgeEl = $("#lodging-grid");
   const lodgeFolder = T.meta && T.meta.lodgingDriveFolder;
@@ -194,9 +222,9 @@
       </div>
       <div class="info-card reveal">
         <h3>🚗 租車 Nissan</h3>
-        <p><span class="badge badge-ok">已訂</span> 確認 <code>${c.confirm}</code></p>
+        <p><span class="badge badge-ok">BOOKED</span> 確認 <code>${c.confirm}</code>${c.etc === "included" ? ' <span class="badge badge-ok">ETC 已含</span>' : ""}</p>
         <p>${c.vendor}</p>
-        <p>${c.model}</p>
+        <p>${c.model}${c.total ? "｜" + c.total : ""}</p>
         <p>${c.pickup} → ${c.return}</p>
         <p style="font-size:0.8rem;opacity:0.85">${c.note}</p>
         ${carLinks}
@@ -261,6 +289,7 @@
     const bounds = [];
     T.places.forEach((p) => {
       if (!p.lat || !p.lng) return;
+      if (p.day == null) return; // 後備／非主線唔上地圖
       const isTbd = (p.tags || []).includes("TBD");
       const vo = visitOrder[p.id];
       const tagLabel = vo ? vo.label : `D${p.day}`;

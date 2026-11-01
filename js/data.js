@@ -1,6 +1,6 @@
 /**
  * Fuji Five Lakes + Hakone 2027 trip data
- * Coordinates: OpenStreetMap Nominatim (queried 2026-10-27; Daikanzan peak 2026-10-29; Ikiiki approx via 道の駅なるさわ 2026-10-29; Day6 Shinjuku/Meguro/Ebisu omakase 2026-11-01; Day5 よしかわ海道 approx 2026-11-01) unless noted.
+ * Coordinates: OpenStreetMap Nominatim (queried 2026-10-27; Daikanzan peak 2026-10-29; Ikiiki approx via 道の駅なるさわ 2026-10-29; Day6 Daikanyama/Nakameguro + Day5 すし寿 approx 2026-11-01) unless noted.
  * Known-public / address-approx coords marked with // approx
  */
 window.TRIP = {
@@ -11,7 +11,7 @@ window.TRIP = {
     days: 6,
     nights: 5,
     travelers: ["Sunny", "Helen"],
-    updated: "2026-11-01 22:15",
+    updated: "2026-11-01 23:10",
     note: "行程或會微調；出發前請再確認營業時間同路況。",
     flights: {
       out: { code: "UO646", pnr: "DBY9RQ", from: "HKG T2 13:00", to: "NRT T2 18:05", date: "13/2" },
@@ -26,8 +26,10 @@ window.TRIP = {
       model: "Kicks e-POWER 四驅 + 雪胎（スタッドレス）",
       confirm: "26101305986",
       pickup: "14/2 08:00 新宿",
-      return: "17/2 ~19:00 新宿同店",
-      note: "行程檔曾寫「報價中未訂」；記憶／確認號顯示已訂。要加租 ETC；滿油還車。"
+      return: "17/2 19:00 新宿同店",
+      etc: "included",
+      total: "¥58,795",
+      note: "已訂 BOOKED｜確認 26101305986｜還車 19:00｜ETC 卡已含｜全面支援計劃｜滿油還車。"
     },
     lodgingDriveFolder: "https://drive.google.com/drive/folders/1pjdWHhVte7PSHph1FGT8-j9zwGA96lOs",
     links: [
@@ -157,12 +159,12 @@ window.TRIP = {
       image: "images/shinjuku-west.jpg",
       tags: ["交通"],
       intro: "四日自駕嘅起點。由新宿上中央道出河口湖，返程東名回新宿同店還車。",
-      tips: "確認號 26101305986｜14/2 08:00 取 → 17/2 ~19:00 還｜Kicks 四驅＋雪胎｜必加 ETC｜滿油還車。",
-      detail: "日產租車新宿駅西口店係四日自駕嘅起點同終點。取車後經中央道出河口湖，返程東名高速回新宿同店還車。確認號同雪胎、ETC 係今次行程嘅硬條件。",
+      tips: "確認號 26101305986｜BOOKED｜14/2 08:00 取 → 17/2 19:00 還｜Kicks 四驅＋雪胎｜ETC 已含｜滿油還車｜總計 ¥58,795。",
+      detail: "日產租車新宿駅西口店係四日自駕嘅起點同終點。取車後經中央道出河口湖，返程東名高速回新宿同店還車。確認號、雪胎同已含 ETC 係今次行程嘅硬條件。",
       history: "新宿站西口長期係都心往甲信越同中部方向嘅交通門戶；周邊租車舖服務週末出遊同商務出行。",
       origin: "選西口店係因為住西新宿、朝早取車快，返程傍晚還車後又可步行返 Kadoya。",
-      stories: "冬日中央道八王子附近朝早較順；雪胎同 ETC 唔好漏。滿油還車係合約基本要求。",
-      highlights: ["確認號 26101305986", "Kicks e-POWER 四驅＋雪胎", "必加 ETC｜滿油還車"],
+      stories: "冬日中央道八王子附近朝早較順；雪胎同 ETC（已含）唔好漏。滿油還車係合約基本要求。",
+      highlights: ["確認號 26101305986｜BOOKED", "Kicks e-POWER 四驅＋雪胎", "ETC 已含｜還車 19:00｜滿油"],
       mapsQuery: "日産レンタカー 新宿駅西口",
       links: [
         { label: "官方網站", url: "https://nissan-rentacar.com/shops/3FDY1", kind: "official" },
@@ -731,21 +733,170 @@ window.TRIP = {
       ]
     },
     {
-      id: "morethan-bakery",
-      name: "MORETHAN BAKERY",
-      nameJa: "MORETHAN BAKERY",
-      day: 6,
-      lat: 35.6886160,
-      lng: 139.6883990, // THE KNOT TOKYO Shinjuku (Nominatim 2026-11-01)
+      id: "sushi-kotobuki",
+      name: "すし寿（Sushi Kotobuki｜暫定）",
+      nameJa: "すし寿",
+      day: 5,
+      lat: 35.6898033,
+      lng: 139.6993602, // approx 西新宿1-14-17 Queens NS 一帶 2026-11-01
       image: "images/shinjuku-west.jpg",
-      tags: ["早餐", "烘焙", "新宿"],
-      intro: "西新宿 THE KNOT 酒店 1F 烘焙店——Kadoya check-out 後步行可到，適合最後一日輕鬆早餐。",
-      tips: "西新宿 4-31-1｜每日 08:00–18:00｜由 Kadoya 步行約 10–15 分｜未訂｜出發前確認。",
-      detail: "MORETHAN BAKERY 喺 THE KNOT TOKYO Shinjuku 1F，賣新鮮麵包、三文治同咖啡，氣氛似本地 bakery 多過酒店餐廳，適合兩人慢慢食完再搭山手線去目黒。",
-      history: "THE KNOT 系列酒店強調社區感；1F bakery 對住街外，常有附近上班族同旅客一齊排隊。",
-      origin: "選近 Kadoya 嘅西新宿，方便暫存行李後空身起步。",
-      stories: "平日朝早相對鬆；熱三文治賣完會提早收——想食熱嘅早啲到。",
-      highlights: ["西新宿步行可到", "08:00–18:00", "早餐第一站"],
+      tags: ["晚餐", "壽司", "暫定", "新宿"],
+      intro: "Day 5 暫定晚餐。還車＋Kadoya CI 後，約 19:30–20:00 入座おまかせ寿。未訂，等 Sunny 確認。",
+      tips: "西新宿1-14-17 Queens NSビル B1F｜新宿駅徒歩約 1 分｜17:00–23:00（最終入店約 21:00）｜おまかせ寿 ¥16,500 税込 + サービス料 10% → 約 ¥18,150｜後備特上 ¥19,800+10%｜電話 03-6258-5980／Tabelog 050-5872-5877｜暫定／未訂。",
+      detail: "すし寿（スシコトブキ）喺西新宿 Queens NS B1F。Sunny 改以呢間做 17/2 晚暫定晚餐；おまかせ寿コース約 ¥18,150／人（含 10% 服務費）。動線：~19:00 新宿西口還車 → Kadoya CI → 約 19:30–20:00 入座（時間較彈性，唔係兩輪制）。",
+      history: "西新宿站前大樓地下壽司店；Tabelog／官網有コース同訂位資訊。",
+      origin: "還車後住 Kadoya，順路西新宿食壽司，唔使再搭車出遠。",
+      stories: "狀態係暫定／未訂——等 Sunny 確認 booked 先改「已訂」。※前暫定 鮨よしかわ 海道 已由本店取代，唔再當主線。",
+      highlights: ["暫定／未訂", "おまかせ寿 ≈¥18,150", "~19:30–20:00 入座", "Queens NS B1F"],
+      mapsQuery: "すし寿 西新宿1-14-17 Queens NS",
+      links: [
+        { label: "Tabelog", url: "https://tabelog.com/tokyo/A1304/A130401/13255875/", kind: "ref" },
+        { label: "官方コース", url: "http://www.sushi-kotobuki.com/course/", kind: "official" },
+        { label: "官方網站", url: "http://www.sushi-kotobuki.com/", kind: "official" },
+      ]
+    },
+    {
+      id: "garden-house-crafts",
+      name: "GARDEN HOUSE CRAFTS",
+      nameJa: "GARDEN HOUSE CRAFTS",
+      day: 6,
+      lat: 35.6508239,
+      lng: 139.7054023, // LOG ROAD DAIKANYAMA Nominatim 2026-11-01
+      image: "images/cafe-coffee.jpg",
+      tags: ["早餐", "咖啡", "代官山"],
+      intro: "代官山 LOG ROAD——Day 6 主線早餐。Kadoya CO 後過嚟歎咖啡同 morning。",
+      tips: "代官山町 13-1 LOG ROAD DAIKANYAMA 5号棟｜08:30–18:00（無定休→四 OK）｜モーニング約至 11:00｜03-6452-5200｜walk-in｜未訂。",
+      detail: "GARDEN HOUSE CRAFTS 喺代官山 LOG ROAD，賣咖啡、烘焙同輕食，適合最後一日悠閒起步。全日無休，星期四 OK。",
+      history: "Garden House 系列喺東京多處；Crafts 店強調手作同生活雜貨氛圍。",
+      origin: "Sunny 確認以 Garden House Crafts 做 Day 6 早餐主線（取代舊 PIX／MORETHAN）。",
+      stories: "之後行去 T-SITE → Conran → 中目黒。規劃時間，並非排隊保證。",
+      highlights: ["Day 6 早餐主線", "08:30 開｜無定休", "LOG ROAD 代官山"],
+      mapsQuery: "GARDEN HOUSE CRAFTS 代官山町13-1",
+      links: [
+        { label: "官方網站", url: "https://ghghgh.jp/en/blogs/shoplist/garden-house-crafts-daikanyama", kind: "official" },
+      ]
+    },
+    {
+      id: "tsite-daikanyama",
+      name: "代官山 T-SITE／蔦屋書店",
+      nameJa: "代官山 蔦屋書店",
+      day: 6,
+      lat: 35.6492601,
+      lng: 139.6998300, // Nominatim 2026-11-01
+      image: "images/tokyo-chill.jpg",
+      tags: ["書店", "散步", "代官山"],
+      intro: "代官山經典文化複合——設計書、文具、庭園。早餐後慢慢行。",
+      tips: "猿楽町 17-5｜書店約 09:00–22:00｜walk-in｜https://store.tsite.jp/daikanyama/",
+      detail: "代官山 T-SITE（蔦屋書店）係三棟建築組成嘅書店／生活提案空間，庭園同雜誌區適合慢逛。",
+      history: "蔦屋書店代官山店 2011 年開幕，成為代官山文化地標之一。",
+      origin: "夾喺 Garden House 同 Conran 之間，順路。",
+      stories: "時間夠就喺雜誌區坐陣；之後行去 Hillside Terrace 一帶嘅 Conran。",
+      highlights: ["書店約 09:00–", "設計書／文具", "代官山地標"],
+      mapsQuery: "代官山 蔦屋書店 T-SITE",
+      links: [
+        { label: "官方網站", url: "https://store.tsite.jp/daikanyama/", kind: "official" },
+      ]
+    },
+    {
+      id: "conran-daikanyama",
+      name: "The Conran Shop 代官山",
+      nameJa: "ザ・コンランショップ 代官山",
+      day: 6,
+      lat: 35.6477110,
+      lng: 139.7010703, // ヒルサイドテラス一帶 Nominatim 2026-11-01
+      image: "images/tokyo-chill.jpg",
+      tags: ["設計", "選物", "代官山"],
+      intro: "Hillside Terrace 內設計選物店——家具、餐具、生活雜貨。",
+      tips: "猿楽町 18-8 ヒルサイドテラス F棟｜11:00–18:00（水休→四 OK）｜03-6703-6700｜walk-in。",
+      detail: "The Conran Shop 代官山店喺 Hillside Terrace，售賣英國設計品牌同精選生活器物。",
+      history: "Conran Shop 源自英國；代官山店坐落喺槇文彥設計嘅 Hillside Terrace 建築群。",
+      origin: "T-SITE 之後順路；之後沿小街步行去中目黒。",
+      stories: "星期三休——18/2 星期四 OK。唔使訂。",
+      highlights: ["11:00 開｜水休", "Hillside Terrace", "設計選物"],
+      mapsQuery: "The Conran Shop 代官山",
+      links: [
+        { label: "官方網站", url: "https://www.conranshop.jp/", kind: "official" },
+      ]
+    },
+    {
+      id: "haiji",
+      name: "ハイジ（HAIJI）",
+      nameJa: "ハイジ",
+      day: 6,
+      lat: 35.6448,
+      lng: 139.6995, // approx 上目黒2-13-3 中目黒 2026-11-01
+      image: "images/tokyo-chill.jpg",
+      tags: ["雜貨", "手作", "中目黒"],
+      intro: "中目黒手作雜貨——由代官山步行過來第一站。",
+      tips: "上目黒 2-13-3 井内ビル 2F｜12:00–18:00（水休→四 OK）｜03-5722-3282｜walk-in。",
+      detail: "ハイジ（HAIJI）賣手作雜貨同家居小物，店面喺上目黒細樓 2F，適合短停掃貨。",
+      history: "中目黒／上目黒一帶獨立選物店聚集；ハイジ係本地手作系店鋪之一。",
+      origin: "代官山→中目黒步行動線上嘅第一站，之後去麵屋みかん。",
+      stories: "官網寫 12:00 開；星期三休。時間短停 20–25 分即可。",
+      highlights: ["12:00–18:00｜水休", "手作雜貨", "近みかん"],
+      mapsQuery: "ハイジ 上目黒2-13-3",
+      links: [
+        { label: "官方網站", url: "https://heidi-home.com/", kind: "official" },
+      ]
+    },
+    {
+      id: "menya-mikan",
+      name: "麵屋みかん",
+      nameJa: "麺やみかん",
+      day: 6,
+      lat: 35.6452,
+      lng: 139.7005, // approx 上目黒2-18-9 2026-11-01
+      image: "images/hoto-ayumi.jpg",
+      tags: ["午餐", "拉麵", "中目黒"],
+      intro: "Day 6 主線午餐——中目黒拉麵，通常 walk-in 唔使訂。",
+      tips: "上目黒 2-18-9｜10:00–21:00（水休→四 OK）｜通常唔使訂｜080-3427-5555｜Tabelog 有評。",
+      detail: "麵屋みかん（麺やみかん）喺上目黒，營業至 21:00；星期四有開。適合午餐後再決定去唔去 Traveler's Factory。",
+      history: "中目黒拉麵選擇多；みかん係近期受歡迎嘅本地店之一。",
+      origin: "HAIJI 短行即到；主線午餐取代舊恵比寿 omakase。",
+      stories: "walk-in；人多就稍候。之後可選 Traveler's Factory，或直接返新宿拎袋。",
+      highlights: ["主線午餐", "walk-in｜水休", "10:00–21:00"],
+      mapsQuery: "麺やみかん 上目黒2-18-9",
+      links: [
+        { label: "Tabelog", url: "https://tabelog.com/tokyo/A1317/A131701/13295731/", kind: "ref" },
+      ]
+    },
+    {
+      id: "travelers-factory",
+      name: "TRAVELER'S FACTORY 中目黒（可選）",
+      nameJa: "トラベラーズファクトリー 中目黒",
+      day: 6,
+      lat: 35.6435,
+      lng: 139.6980, // approx 上目黒3-13-10 2026-11-01
+      image: "images/tokyo-chill.jpg",
+      tags: ["文具", "可選", "中目黒"],
+      intro: "時間夠先去——Traveler's Notebook 相關文具／選物。",
+      tips: "上目黒 3-13-10｜12:00–20:00（火休→四 OK）｜03-6412-7830｜可選｜時間緊可跳過。",
+      detail: "TRAVELER'S FACTORY 中目黒店售賣 Traveler's Notebook 周邊同旅行文具，適合最後掃伴手禮。",
+      history: "Traveler's Company 以 Traveler's Notebook 聞名；中目黒係東京實體店之一。",
+      origin: "みかん之後可選；唔影響 13:30 前返新宿嘅 buffer。",
+      stories: "星期二休——18/2 星期四 OK。時間唔夠就跳過。",
+      highlights: ["可選", "12:00–20:00｜火休", "文具伴手禮"],
+      mapsQuery: "TRAVELER'S FACTORY 中目黒",
+      links: [
+        { label: "官方網站", url: "https://www.travelers-factory.com/", kind: "official" },
+      ]
+    },
+    {
+      id: "morethan-bakery",
+      name: "MORETHAN BAKERY（後備）",
+      nameJa: "MORETHAN BAKERY",
+      day: null,
+      lat: 35.6886160,
+      lng: 139.6883990,
+      image: "images/shinjuku-west.jpg",
+      tags: ["後備", "早餐", "烘焙", "新宿"],
+      intro: "舊 Day 6 早餐——已唔再係主線（改 Garden House Crafts）。",
+      tips: "西新宿 4-31-1｜每日 08:00–18:00｜僅後備。",
+      detail: "MORETHAN BAKERY 喺 THE KNOT TOKYO Shinjuku 1F；2026-11-01 主線已改代官山 Garden House。",
+      history: "THE KNOT 系列酒店 1F bakery。",
+      origin: "保留作天氣／興趣後備，唔再當主行程。",
+      stories: "唔再係主線。",
+      highlights: ["後備", "唔再係主線"],
       mapsQuery: "MORETHAN BAKERY THE KNOT TOKYO Shinjuku",
       links: [
         { label: "官方網站", url: "https://hotel-the-knot.jp/tokyoshinjuku/morethan-bakery/", kind: "official" },
@@ -753,84 +904,62 @@ window.TRIP = {
     },
     {
       id: "bluebottle-meguro",
-      name: "Blue Bottle Coffee 目黒",
+      name: "Blue Bottle Coffee 目黒（後備）",
       nameJa: "ブルーボトルコーヒー 目黒",
-      day: 6,
+      day: null,
       lat: 35.6342143,
-      lng: 139.7133755, // Nominatim 2026-11-01
+      lng: 139.7133755,
       image: "images/cafe-coffee.jpg",
-      tags: ["咖啡", "目黒"],
-      intro: "目黒駅徒歩約 3 分・権之助坂——今日主 café。歎完短行権之助坂／目黒川，再去恵比寿 lunch omakase。",
-      tips: "下目黒 1-2-19｜08:00–19:00｜駅徒歩約 3 分｜未訂｜https://store.bluebottlecoffee.jp/pages/meguro",
-      detail: "Blue Bottle 目黒店沿権之助坂，提供手沖／espresso、烘焙同輕食。山手線新宿→目黒約 12–15 分，適合最後一日 chill 半日嘅中段。",
-      history: "Blue Bottle 源自美國 Oakland；日本多間分店以建築同社區選址見稱，目黒店面向辦公／住宅混合區。",
-      origin: "選目黒係為咗山手線順路：新宿早餐 → 目黒 café → 恵比寿 omakase → 返新宿拎袋。",
-      stories: "Sunny 習慣約 1 café／日——今日就係呢度。冬天可室內坐；短行目黒川即可，留時間 12:00 入座 omakase。",
-      highlights: ["今日主 café", "08:00–19:00", "近権之助坂／目黒川"],
+      tags: ["後備", "咖啡", "目黒"],
+      intro: "舊 Day 6 主 café——已唔再係主線。",
+      tips: "下目黒 1-2-19｜08:00–19:00｜僅後備。",
+      detail: "Blue Bottle 目黒店；主線已改代官山＋中目黒。",
+      history: "Blue Bottle 目黒店。",
+      origin: "保留作後備。",
+      stories: "唔再係主線。",
+      highlights: ["後備", "唔再係主線"],
       mapsQuery: "Blue Bottle Coffee Meguro",
       links: [
         { label: "官方網站", url: "https://store.bluebottlecoffee.jp/pages/meguro", kind: "official" },
       ]
     },
     {
-      id: "meguro-river",
-      name: "目黒川／権之助坂散步",
-      nameJa: "目黒川・権之助坂",
-      day: 6,
-      lat: 35.6417961,
-      lng: 139.7019557, // 目黒川船入場 area Nominatim 2026-11-01
-      image: "images/tokyo-chill.jpg",
-      tags: ["散步", "目黒"],
-      intro: "Blue Bottle 前後短迴路——権之助坂＋目黒川近駅一段（約 20–30 分），唔深掃中目黒。",
-      tips: "免費｜約 20–30 分即夠｜2 月唔係櫻花季｜着暖｜之後要趕 12:00 恵比寿 omakase。",
-      detail: "目黒川連接中目黒同目黒一帶；平日人流較週末少。權之助坂由駅向坡上／坡下都行得，適合兩人影相同消化早餐。",
-      history: "目黒川以春櫻聞名，冬日河岸依然係本地散步路線；権之助坂係目黒駅前主要坡道商店街。",
-      origin: "夾喺主 café 同恵比寿 lunch omakase 之間，唔另開大行程。",
-      stories: "唔使行去中目黒掃店——留時間 12:00 入座 omakase，再返新宿拎袋趕 14:38 N'EX。",
-      highlights: ["短停即可", "近 Blue Bottle", "平日較鬆"],
-      mapsQuery: "目黒川 目黒",
-      links: [
-        { label: "GO TOKYO（目黒川）", url: "https://www.gotokyo.org/en/spot/48/index.html", kind: "ref" },
-      ]
-    },
-    {
       id: "ebisu-shigeta",
-      name: "SUSHI Ebisu-SHIGETA",
+      name: "SUSHI Ebisu-SHIGETA（後備）",
       nameJa: "恵比寿しげ田",
-      day: 6,
+      day: null,
       lat: 35.6467800,
-      lng: 139.7089000, // Ebisu-nishi 1-9-7 area approx 2026-11-01
+      lng: 139.7089000,
       image: "images/tokyo-chill.jpg",
-      tags: ["午餐", "壽司", "omakase", "恵比寿"],
-      intro: "恵比寿西口——Day 6 主線 lunch omakase。午餐 11 貫較短，啱趕 14:20 離 Kadoya。",
-      tips: "恵比寿西 1-9-7 グランベル 9F｜火–六 12:00–14:00 LO 13:30｜四有開｜午餐 11 貫 ¥7,700｜要預約 TableCheck／03-6712-7655｜英語可｜目標 12:00 開始、~13:30 前完。",
-      detail: "SUSHI Ebisu-SHIGETA（恵比寿しげ田）提供江戶前壽司 omakase；午餐有 11 貫コース（¥7,700）同更長嘅 18 品「梅」（¥19,800——起飛日時間緊唔建議）。店主青山有英語，適合旅客。JR 恵比寿西口徒歩約 3 分。",
-      history: "店主青山征晃有洛杉磯星級店同海外經驗，返日後喺恵比寿做江戶前＋異國靈感月替スペシャリテ。",
-      origin: "為 Day 6 硬時間（~13:30 前完午餐 → ~14:05–14:15 返 Kadoya）揀較短、可網上訂、星期四有開嘅恵比寿 omakase。",
-      stories: "後備：らんまる（12:00–13:30 硬完，訂位難）、宇田津 鮨（平日 12:00 起偏長／偏緊）、WHITE GLASS（輕食、唔再係主午餐）。",
-      highlights: ["主線 lunch omakase", "11 貫 ¥7,700", "火–六｜四 OK", "TableCheck 可訂"],
+      tags: ["後備", "壽司", "omakase", "恵比寿"],
+      intro: "舊 Day 6 lunch omakase——已唔再係主線（改麵屋みかん）。",
+      tips: "恵比寿西 1-9-7｜僅後備｜要預約。",
+      detail: "SUSHI Ebisu-SHIGETA；2026-11-01 主線已改中目黒拉麵。",
+      history: "恵比寿江戶前壽司。",
+      origin: "保留作訂位／興趣後備。",
+      stories: "唔再係主線。",
+      highlights: ["後備", "唔再係主線"],
       mapsQuery: "恵比寿しげ田 グランベル恵比寿西",
       links: [
         { label: "官方網站", url: "https://ebisu-shigeta.com/en/", kind: "official" },
-        { label: "TableCheck 預約", url: "https://www.tablecheck.com/en/shops/ebisu-shigeta/reserve", kind: "ref" },
       ]
     },
     {
       id: "white-glass-shibuya",
       name: "WHITE GLASS COFFEE（後備）",
       nameJa: "WHITE GLASS COFFEE",
-      day: 6,
+      day: null,
       lat: 35.6556312,
-      lng: 139.7009039, // Sakuragaoka area approx Nominatim 2026-11-01
+      lng: 139.7009039,
       image: "images/tokyo-chill.jpg",
       tags: ["後備", "咖啡", "渋谷", "輕食"],
-      intro: "渋谷桜丘町輕食 café——omakase 訂唔到／想輕食時先用；已唔再係主午餐。",
-      tips: "桜丘町 23-18｜每日 08:00–20:00｜無休｜渋谷駅西口徒歩約 5 分｜未訂｜https://whiteglasscoffee.com/",
-      detail: "WHITE GLASS COFFEE 喺渋谷西口桜丘町，有沙發同露台感座位，賣咖啡、輕食同甜品；平日相對週末鬆。",
-      history: "桜丘町近年再開發，保留一啲獨立 café 氛圍，同站前十字路口人潮唔同調。",
-      origin: "保留作 lunch omakase 後備，唔再當 Day 6 主線。",
-      stories: "若改嚟呢度，山手線目黒→渋谷約 6–8 分；仍要 ~13:40 前完再返新宿拎袋。",
-      highlights: ["輕食後備", "08:00–20:00 無休", "唔再係主午餐"],
+      intro: "渋谷桜丘町輕食 café——僅後備。",
+      tips: "桜丘町 23-18｜每日 08:00–20:00｜僅後備。",
+      detail: "WHITE GLASS COFFEE；唔再係 Day 6 主線。",
+      history: "桜丘町獨立 café。",
+      origin: "保留作後備。",
+      stories: "唔再係主線。",
+      highlights: ["後備", "唔再係主線"],
       mapsQuery: "WHITE GLASS COFFEE 桜丘町",
       links: [
         { label: "官方網站", url: "https://whiteglasscoffee.com/", kind: "official" },
@@ -838,25 +967,23 @@ window.TRIP = {
     },
     {
       id: "yoshikawa-kaido",
-      name: "鮨よしかわ 海道 新宿（暫定）",
+      name: "鮨よしかわ 海道 新宿（後備）",
       nameJa: "鮨よしかわ 海道 新宿",
-      day: 5,
+      day: null,
       lat: 35.6948,
-      lng: 139.6938, // approx 西新宿7-19-7／サンローゼ新宿 2026-11-01
+      lng: 139.6938,
       image: "images/shinjuku-west.jpg",
-      tags: ["晚餐", "壽司", "暫定", "新宿"],
-      intro: "Day 5 暫定晚餐。還車＋Kadoya CI 後，目標 20:30 輪食大将おまかせ（¥14,300）。未訂，等 Sunny 確認。",
-      tips: "西新宿 7-19-7 サンローゼ新宿 101｜店只 18:00／20:30 兩輪 → 計劃 20:30｜大将おまかせ ¥14,300 税込（約 19 品・2h；唔係飲品含 ¥19,800）｜電話 03-5937-3588／訂位 050-5456-5882｜暫定／未訂。",
-      detail: "鮨よしかわ 海道 新宿喺西新宿 7 丁目。Sunny 暫定 17/2 晚 20:30 輪；コース用 Tabelog 大将おまかせ ¥14,300（約 19 品、約 2h 停留）。動線：~19:00 新宿西口還車 → Kadoya CI → 行去店。",
-      history: "よしかわ系列喺東京多間分店；海道 新宿係西新宿一間壽司店，Tabelog 有派對／コース頁。",
-      origin: "還車後住 Kadoya，順路西新宿食壽司，唔使再搭車出遠。",
-      stories: "狀態係暫定／未訂——等 Sunny 確認 booked 先改「已訂」。唔好同飲品含入嘅 ¥19,800 撈亂。",
-      highlights: ["暫定／未訂", "20:30 輪", "大将おまかせ ¥14,300", "約 19 品・2h"],
+      tags: ["後備", "晚餐", "壽司", "新宿"],
+      intro: "舊 Day 5 暫定晚餐——已由 すし寿 取代，唔再當主線。",
+      tips: "西新宿 7-19-7｜僅後備｜唔再當主線。",
+      detail: "鮨よしかわ 海道 新宿；2026-11-01 改以 すし寿 做暫定晚餐。",
+      history: "よしかわ系列西新宿店。",
+      origin: "保留作後備參考。",
+      stories: "唔再係主線。",
+      highlights: ["後備", "已由すし寿取代"],
       mapsQuery: "鮨よしかわ 海道 新宿 西新宿7-19-7",
       links: [
         { label: "Tabelog", url: "https://tabelog.com/tokyo/A1304/A130401/13310859/", kind: "ref" },
-        { label: "大将おまかせ ¥14,300", url: "https://tabelog.com/tokyo/A1304/A130401/13310859/party/273625132", kind: "ref" },
-        { label: "官方網站", url: "https://sushi-yoshikawa.jp/kaido/", kind: "official" },
       ]
     }
   ],
@@ -940,40 +1067,42 @@ window.TRIP = {
       id: 5,
       date: "17/2（三）",
       title: "箱根 → 御殿場 → 新宿",
-      subtitle: "Outlet、虎屋工房、還車",
+      subtitle: "Outlet、虎屋工房、還車、すし寿",
       hero: "images/gotemba.jpg",
-      summary: "季之湯雪月花（強羅）CO → 御殿場 Outlet 半日 → とらや工房 → 入油後東名返新宿還車 → Kadoya CI → 晚餐暫定 鮨よしかわ 海道 新宿 20:30（未訂）。",
+      summary: "季之湯雪月花（強羅）CO → 御殿場 Outlet 半日 → とらや工房 → 入油後東名返新宿還車（19:00｜已含 ETC）→ Kadoya CI → 晚餐暫定 すし寿（未訂；約 19:30–20:00 入座）。",
       timeline: [
         { time: "~09:00–09:30", text: "季之湯雪月花 CO（正式 11:00；目標早走）→ 御殿場（約 40–70 分）", placeId: "hakone-hotel" },
         { time: "~10:00–10:30", text: "御殿場プレミアム・アウトレット（玩至 ~15:30）", placeId: "gotemba" },
         { time: "午", text: "Outlet 內午餐（店多，出發前確認）", placeId: "gotemba" },
         { time: "~15:30", text: "離開 Outlet → とらや工房（~16:00，約 30 分）", placeId: "toraya" },
         { time: "~16:30", text: "入油（滿油）→ 東名高速返東京", placeId: null },
-        { time: "~19:00", text: "Nissan 新宿駅西口還車 → Kadoya CI（RYa0nktyza）", placeId: "kadoya" },
-        { time: "20:30", text: "晚餐（暫定／未訂）鮨よしかわ 海道 新宿｜大将おまかせ ¥14,300｜20:30 輪", placeId: "yoshikawa-kaido" }
+        { time: "~19:00", text: "Nissan 新宿駅西口還車（26101305986｜ETC 已含）→ Kadoya CI（RYa0nktyza）", placeId: "nissan" },
+        { time: "~19:30–20:00", text: "晚餐（暫定／未訂）すし寿｜おまかせ寿 ≈¥18,150｜Queens NS B1F", placeId: "sushi-kotobuki" }
       ],
-      transport: "箱根→Outlet 短程；御殿場 IC→新宿約 1.5–2 小時（傍晚或塞）。目標 19:00 前還車 → Kadoya → 行去 20:30 晚餐。"
+      transport: "箱根→Outlet 短程；御殿場 IC→新宿約 1.5–2 小時（傍晚或塞）。目標 19:00 還車 → Kadoya → 約 19:30–20:00 すし寿。"
     },
     {
       id: 6,
       date: "18/2（四）",
-      title: "新宿／目黒／恵比寿 → NRT → 香港",
-      subtitle: "café＋短散步＋lunch omakase，N'EX 14:38",
+      title: "代官山＋中目黒 → NRT → 香港",
+      subtitle: "Garden House → 中目黒，N'EX 15:08",
       hero: "images/tokyo-chill.jpg",
-      summary: "Kadoya CO → MORETHAN 早餐 → Blue Bottle 目黒＋権之助坂／目黒川短行 → SUSHI Ebisu-SHIGETA lunch omakase（目標 12:00–~13:30）→ ~14:05–14:15 拎袋 → ~14:20 離店 → N'EX 14:38。WHITE GLASS 僅後備；蔵前／成田市唔係主線。",
+      summary: "Kadoya CO＋寄存 → GARDEN HOUSE CRAFTS 早餐 → T-SITE → Conran → 步行去中目黒 → ハイジ → 麵屋みかん →（可選 Traveler's Factory）→ 13:30–14:20 返新宿 → 14:20–14:45 拎袋 → N'EX 15:08（~16:31 NRT）→ UO647。PIX／NUMBER SUGAR／MORETHAN／Blue Bottle／SHIGETA 唔再係主線。",
       timeline: [
-        { time: "~09:00", text: "Kadoya CO｜行李：預設問酒店暫存（A）；或 locker／前晚寄 NRT", placeId: "kadoya" },
-        { time: "~09:30–10:25", text: "MORETHAN BAKERY 早餐（西新宿／THE KNOT｜步行約 10–15 分）", placeId: "morethan-bakery" },
-        { time: "~10:25–10:50", text: "山手線 新宿 → 目黒（約 12–15 分）", placeId: "bluebottle-meguro" },
-        { time: "~10:50–11:40", text: "Blue Bottle 目黒（主 café）＋権之助坂／目黒川短迴路", placeId: "bluebottle-meguro" },
-        { time: "~11:40–11:55", text: "山手線 目黒 → 恵比寿（約 5–7 分）", placeId: "ebisu-shigeta" },
-        { time: "~12:00–13:30", text: "午餐 SUSHI Ebisu-SHIGETA（11 貫 omakase ¥7,700｜要預約）", placeId: "ebisu-shigeta" },
-        { time: "~13:30–14:15", text: "返新宿 → Kadoya 拎行李（目標 ~14:05–14:15）", placeId: "kadoya" },
-        { time: "~14:20", text: "離開 Kadoya → 新宿站 N'EX 月台（步行約 ~15 分）", placeId: "kadoya" },
-        { time: "14:38", text: "N'EX 主選：新宿 → T2 ~15:53／T1 ~15:57｜後備 14:08→~15:23/15:27｜❌唔用 15:08 做主選｜出發前再確認時刻", placeId: "nrt" },
+        { time: "08:00", text: "Kadoya CO＋寄存行李（西新宿｜RYa0nktyza｜問前台暫存）", placeId: "kadoya" },
+        { time: "08:30–09:20", text: "GARDEN HOUSE CRAFTS 早餐＋咖啡（LOG ROAD 代官山｜walk-in）", placeId: "garden-house-crafts" },
+        { time: "09:40–10:45", text: "代官山 T-SITE／蔦屋書店", placeId: "tsite-daikanyama" },
+        { time: "11:00–11:35", text: "The Conran Shop 代官山（水休→四 OK）", placeId: "conran-daikanyama" },
+        { time: "11:35–12:00", text: "代官山街景步行去中目黒（約 15–25 分）", placeId: "haiji" },
+        { time: "12:00–12:25", text: "ハイジ（HAIJI）手作雜貨", placeId: "haiji" },
+        { time: "12:30–13:10", text: "午餐（主線）麵屋みかん（walk-in｜水休→四 OK）", placeId: "menya-mikan" },
+        { time: "13:10–13:30", text: "可選 Traveler's Factory 中目黒（時間夠先去）", placeId: "travelers-factory" },
+        { time: "13:30–14:20", text: "返新宿 Kadoya（約 20–35 分）", placeId: "kadoya" },
+        { time: "14:20–14:45", text: "拎行李 → JR／N'EX 月台（步行約 ~15 分）", placeId: "kadoya" },
+        { time: "15:08", text: "N'EX 主選：新宿 → ~16:31 NRT｜後備 14:38／14:08｜出發前再確認時刻", placeId: "nrt" },
         { time: "19:00", text: "UO647 起飛 → 23:25 抵 HKG T1｜bag drop 18:00 硬 deadline", placeId: "nrt" }
       ],
-      transport: "日間：JR 山手線 新宿⇄目黒⇄恵比寿。回機場：新宿 N'EX 14:38（主選；現行平日截至 2026 下旬，2027-02 前再確認）／後備 14:08。bag drop 18:00 硬 deadline。行李：A 酒店暫存（要問）／B locker／C 前晚空港宅急便／D 只帶登機。"
+      transport: "日間：代官山＋中目黒步行／短程鐵路。回機場：新宿 N'EX 15:08（主選；~16:31 NRT）／後備 14:38／14:08。bag drop 18:00 硬 deadline。行李：A 酒店暫存（要問）／B locker／C 前晚空港宅急便／D 只帶登機。"
     }
 
   ],
@@ -986,7 +1115,29 @@ window.TRIP = {
     { id: "hakone-shrine", label: "箱根" },
     { id: "gotemba", label: "御殿場" },
     { id: "kadoya", label: "新宿" },
-    { id: "ebisu-shigeta", label: "目黒／恵比寿" },
+    { id: "garden-house-crafts", label: "代官山／中目黒" },
     { id: "nrt", label: "NRT" }
-  ]
+  ],
+
+  todos: {
+    caption: "狀態以行程 md 為準（2026-11-01 ~23:10）；網站顯示靜態清單。",
+    open: [
+      { text: "國際車牌（1949 日內瓦公約版本）" },
+      { text: "Airbnb 屋主要求：登記表 + 護照頁（約 15/10/2026 前）", meta: "~15/10/2026｜deadline 或已過，仍按 md 保留" },
+      { text: "甲州うなよし 14/2 晚餐訂位（電話 0555-22-7722）" },
+      { text: "彩呼亭 15/2 午餐訂位留麵（電話 0555-82-3144）" },
+      { text: "17/2 晚餐（暫定／未訂）：すし寿｜西新宿 Queens NS B1F｜おまかせ寿 ≈¥18,150｜等 Sunny 確認已訂｜よしかわ已取代", meta: "暫定／未訂" },
+      { text: "18/2 walk-in 提醒：Garden House／Conran／HAIJI／麵屋みかん／可選 Traveler's Factory（通常唔使訂）", meta: "soft" },
+      { text: "箱根町／元箱根／湯本一帶 16/2 午餐（待定）；16/2 晚餐＝雪月花方案內含", meta: "午餐待定" },
+      { text: "確認 2027 河口湖冬季花火日期（未公布）" }
+    ],
+    done: [
+      { text: "16/2 箱根溫泉酒店 → 已訂季之湯雪月花（Rakuten 21315099251796）", meta: "已訂" },
+      { text: "Airbnb 縮短至 15→16 → 已改訂（HM5WBB3CJB｜CI 15/2 15:00、CO 16/2 10:00）", meta: "已改訂" },
+      { text: "租車 → 已訂 Nissan｜確認 26101305986｜Kicks e-POWER 4WD｜14/2 08:00→17/2 19:00 新宿西口｜¥58,795", meta: "BOOKED" },
+      { text: "租車 ETC 卡 → 已含（確認證任選附加；26101305986）", meta: "已含" },
+      { text: "17/2 晚住宿：已訂 Kadoya Hotel（Rakuten RYa0nktyza）", meta: "已訂" },
+      { text: "KABA 水陸兩用巴士：Day 4 已改去箱根，唔使訂", meta: "唔使訂" }
+    ]
+  }
 };
