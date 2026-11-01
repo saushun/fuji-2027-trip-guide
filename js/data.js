@@ -1,6 +1,6 @@
 /**
  * Fuji Five Lakes + Hakone 2027 trip data
- * Coordinates: OpenStreetMap Nominatim (queried 2026-10-27; Daikanzan peak 2026-10-29; Ikiiki approx via 道の駅なるさわ 2026-10-29; Day6 Shinjuku/Meguro/Ebisu omakase 2026-11-01) unless noted.
+ * Coordinates: OpenStreetMap Nominatim (queried 2026-10-27; Daikanzan peak 2026-10-29; Ikiiki approx via 道の駅なるさわ 2026-10-29; Day6 Shinjuku/Meguro/Ebisu omakase 2026-11-01; Day5 よしかわ海道 approx 2026-11-01) unless noted.
  * Known-public / address-approx coords marked with // approx
  */
 window.TRIP = {
@@ -11,7 +11,7 @@ window.TRIP = {
     days: 6,
     nights: 5,
     travelers: ["Sunny", "Helen"],
-    updated: "2026-11-01 13:10",
+    updated: "2026-11-01 22:15",
     note: "行程或會微調；出發前請再確認營業時間同路況。",
     flights: {
       out: { code: "UO646", pnr: "DBY9RQ", from: "HKG T2 13:00", to: "NRT T2 18:05", date: "13/2" },
@@ -835,6 +835,29 @@ window.TRIP = {
       links: [
         { label: "官方網站", url: "https://whiteglasscoffee.com/", kind: "official" },
       ]
+    },
+    {
+      id: "yoshikawa-kaido",
+      name: "鮨よしかわ 海道 新宿（暫定）",
+      nameJa: "鮨よしかわ 海道 新宿",
+      day: 5,
+      lat: 35.6948,
+      lng: 139.6938, // approx 西新宿7-19-7／サンローゼ新宿 2026-11-01
+      image: "images/shinjuku-west.jpg",
+      tags: ["晚餐", "壽司", "暫定", "新宿"],
+      intro: "Day 5 暫定晚餐。還車＋Kadoya CI 後，目標 20:30 輪食大将おまかせ（¥14,300）。未訂，等 Sunny 確認。",
+      tips: "西新宿 7-19-7 サンローゼ新宿 101｜店只 18:00／20:30 兩輪 → 計劃 20:30｜大将おまかせ ¥14,300 税込（約 19 品・2h；唔係飲品含 ¥19,800）｜電話 03-5937-3588／訂位 050-5456-5882｜暫定／未訂。",
+      detail: "鮨よしかわ 海道 新宿喺西新宿 7 丁目。Sunny 暫定 17/2 晚 20:30 輪；コース用 Tabelog 大将おまかせ ¥14,300（約 19 品、約 2h 停留）。動線：~19:00 新宿西口還車 → Kadoya CI → 行去店。",
+      history: "よしかわ系列喺東京多間分店；海道 新宿係西新宿一間壽司店，Tabelog 有派對／コース頁。",
+      origin: "還車後住 Kadoya，順路西新宿食壽司，唔使再搭車出遠。",
+      stories: "狀態係暫定／未訂——等 Sunny 確認 booked 先改「已訂」。唔好同飲品含入嘅 ¥19,800 撈亂。",
+      highlights: ["暫定／未訂", "20:30 輪", "大将おまかせ ¥14,300", "約 19 品・2h"],
+      mapsQuery: "鮨よしかわ 海道 新宿 西新宿7-19-7",
+      links: [
+        { label: "Tabelog", url: "https://tabelog.com/tokyo/A1304/A130401/13310859/", kind: "ref" },
+        { label: "大将おまかせ ¥14,300", url: "https://tabelog.com/tokyo/A1304/A130401/13310859/party/273625132", kind: "ref" },
+        { label: "官方網站", url: "https://sushi-yoshikawa.jp/kaido/", kind: "official" },
+      ]
     }
   ],
 
@@ -919,16 +942,17 @@ window.TRIP = {
       title: "箱根 → 御殿場 → 新宿",
       subtitle: "Outlet、虎屋工房、還車",
       hero: "images/gotemba.jpg",
-      summary: "季之湯雪月花（強羅）CO → 御殿場 Outlet 半日 → とらや工房 → 入油後東名返新宿還車，入住 Kadoya。",
+      summary: "季之湯雪月花（強羅）CO → 御殿場 Outlet 半日 → とらや工房 → 入油後東名返新宿還車 → Kadoya CI → 晚餐暫定 鮨よしかわ 海道 新宿 20:30（未訂）。",
       timeline: [
         { time: "~09:00–09:30", text: "季之湯雪月花 CO（正式 11:00；目標早走）→ 御殿場（約 40–70 分）", placeId: "hakone-hotel" },
         { time: "~10:00–10:30", text: "御殿場プレミアム・アウトレット（玩至 ~15:30）", placeId: "gotemba" },
         { time: "午", text: "Outlet 內午餐（店多，出發前確認）", placeId: "gotemba" },
         { time: "~15:30", text: "離開 Outlet → とらや工房（~16:00，約 30 分）", placeId: "toraya" },
         { time: "~16:30", text: "入油（滿油）→ 東名高速返東京", placeId: null },
-        { time: "~19:00", text: "Nissan 新宿駅西口還車 → Kadoya CI（RYa0nktyza）", placeId: "kadoya" }
+        { time: "~19:00", text: "Nissan 新宿駅西口還車 → Kadoya CI（RYa0nktyza）", placeId: "kadoya" },
+        { time: "20:30", text: "晚餐（暫定／未訂）鮨よしかわ 海道 新宿｜大将おまかせ ¥14,300｜20:30 輪", placeId: "yoshikawa-kaido" }
       ],
-      transport: "箱根→Outlet 短程；御殿場 IC→新宿約 1.5–2 小時（傍晚或塞）。目標 19:00 前還車。"
+      transport: "箱根→Outlet 短程；御殿場 IC→新宿約 1.5–2 小時（傍晚或塞）。目標 19:00 前還車 → Kadoya → 行去 20:30 晚餐。"
     },
     {
       id: 6,
