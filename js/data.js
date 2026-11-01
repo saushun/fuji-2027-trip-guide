@@ -1,6 +1,6 @@
 /**
  * Fuji Five Lakes + Hakone 2027 trip data
- * Coordinates: OpenStreetMap Nominatim (queried 2026-10-27; Daikanzan peak 2026-10-29; Ikiiki approx via 道の駅なるさわ 2026-10-29; Day6 Shinjuku/Meguro/Shibuya 2026-11-01) unless noted.
+ * Coordinates: OpenStreetMap Nominatim (queried 2026-10-27; Daikanzan peak 2026-10-29; Ikiiki approx via 道の駅なるさわ 2026-10-29; Day6 Shinjuku/Meguro/Ebisu omakase 2026-11-01) unless noted.
  * Known-public / address-approx coords marked with // approx
  */
 window.TRIP = {
@@ -760,12 +760,12 @@ window.TRIP = {
       lng: 139.7133755, // Nominatim 2026-11-01
       image: "images/cafe-coffee.jpg",
       tags: ["咖啡", "目黒"],
-      intro: "目黒駅徒歩約 3 分・権之助坂——今日主 café。歎完可短行目黒川／坂道再去渋谷午餐。",
+      intro: "目黒駅徒歩約 3 分・権之助坂——今日主 café。歎完短行権之助坂／目黒川，再去恵比寿 lunch omakase。",
       tips: "下目黒 1-2-19｜08:00–19:00｜駅徒歩約 3 分｜未訂｜https://store.bluebottlecoffee.jp/pages/meguro",
       detail: "Blue Bottle 目黒店沿権之助坂，提供手沖／espresso、烘焙同輕食。山手線新宿→目黒約 12–15 分，適合最後一日 chill 半日嘅中段。",
       history: "Blue Bottle 源自美國 Oakland；日本多間分店以建築同社區選址見稱，目黒店面向辦公／住宅混合區。",
-      origin: "選目黒係為咗山手線順路：新宿早餐 → 目黒 café → 渋谷午餐 → 返新宿拎袋。",
-      stories: "Sunny 習慣約 1 café／日——今日就係呢度。冬天可室內坐；時間夠再落目黒川散步。",
+      origin: "選目黒係為咗山手線順路：新宿早餐 → 目黒 café → 恵比寿 omakase → 返新宿拎袋。",
+      stories: "Sunny 習慣約 1 café／日——今日就係呢度。冬天可室內坐；短行目黒川即可，留時間 12:00 入座 omakase。",
       highlights: ["今日主 café", "08:00–19:00", "近権之助坂／目黒川"],
       mapsQuery: "Blue Bottle Coffee Meguro",
       links: [
@@ -781,12 +781,12 @@ window.TRIP = {
       lng: 139.7019557, // 目黒川船入場 area Nominatim 2026-11-01
       image: "images/tokyo-chill.jpg",
       tags: ["散步", "目黒"],
-      intro: "Blue Bottle 前後短停——権之助坂氣氛同目黒川河畔散步，唔使趕長路線。",
-      tips: "免費｜視體力 15–25 分即夠｜2 月唔係櫻花季，當 chill 散步｜着暖。",
+      intro: "Blue Bottle 前後短迴路——権之助坂＋目黒川近駅一段（約 20–30 分），唔深掃中目黒。",
+      tips: "免費｜約 20–30 分即夠｜2 月唔係櫻花季｜着暖｜之後要趕 12:00 恵比寿 omakase。",
       detail: "目黒川連接中目黒同目黒一帶；平日人流較週末少。權之助坂由駅向坡上／坡下都行得，適合兩人影相同消化早餐。",
       history: "目黒川以春櫻聞名，冬日河岸依然係本地散步路線；権之助坂係目黒駅前主要坡道商店街。",
-      origin: "夾喺主 café 同渋谷午餐之間，唔另開大行程。",
-      stories: "唔使行去中目黒掃店——留時間返新宿拎袋趕 14:38 N'EX。",
+      origin: "夾喺主 café 同恵比寿 lunch omakase 之間，唔另開大行程。",
+      stories: "唔使行去中目黒掃店——留時間 12:00 入座 omakase，再返新宿拎袋趕 14:38 N'EX。",
       highlights: ["短停即可", "近 Blue Bottle", "平日較鬆"],
       mapsQuery: "目黒川 目黒",
       links: [
@@ -794,21 +794,43 @@ window.TRIP = {
       ]
     },
     {
+      id: "ebisu-shigeta",
+      name: "SUSHI Ebisu-SHIGETA",
+      nameJa: "恵比寿しげ田",
+      day: 6,
+      lat: 35.6467800,
+      lng: 139.7089000, // Ebisu-nishi 1-9-7 area approx 2026-11-01
+      image: "images/tokyo-chill.jpg",
+      tags: ["午餐", "壽司", "omakase", "恵比寿"],
+      intro: "恵比寿西口——Day 6 主線 lunch omakase。午餐 11 貫較短，啱趕 14:20 離 Kadoya。",
+      tips: "恵比寿西 1-9-7 グランベル 9F｜火–六 12:00–14:00 LO 13:30｜四有開｜午餐 11 貫 ¥7,700｜要預約 TableCheck／03-6712-7655｜英語可｜目標 12:00 開始、~13:30 前完。",
+      detail: "SUSHI Ebisu-SHIGETA（恵比寿しげ田）提供江戶前壽司 omakase；午餐有 11 貫コース（¥7,700）同更長嘅 18 品「梅」（¥19,800——起飛日時間緊唔建議）。店主青山有英語，適合旅客。JR 恵比寿西口徒歩約 3 分。",
+      history: "店主青山征晃有洛杉磯星級店同海外經驗，返日後喺恵比寿做江戶前＋異國靈感月替スペシャリテ。",
+      origin: "為 Day 6 硬時間（~13:30 前完午餐 → ~14:05–14:15 返 Kadoya）揀較短、可網上訂、星期四有開嘅恵比寿 omakase。",
+      stories: "後備：らんまる（12:00–13:30 硬完，訂位難）、宇田津 鮨（平日 12:00 起偏長／偏緊）、WHITE GLASS（輕食、唔再係主午餐）。",
+      highlights: ["主線 lunch omakase", "11 貫 ¥7,700", "火–六｜四 OK", "TableCheck 可訂"],
+      mapsQuery: "恵比寿しげ田 グランベル恵比寿西",
+      links: [
+        { label: "官方網站", url: "https://ebisu-shigeta.com/en/", kind: "official" },
+        { label: "TableCheck 預約", url: "https://www.tablecheck.com/en/shops/ebisu-shigeta/reserve", kind: "ref" },
+      ]
+    },
+    {
       id: "white-glass-shibuya",
-      name: "WHITE GLASS COFFEE",
+      name: "WHITE GLASS COFFEE（後備）",
       nameJa: "WHITE GLASS COFFEE",
       day: 6,
       lat: 35.6556312,
       lng: 139.7009039, // Sakuragaoka area approx Nominatim 2026-11-01
       image: "images/tokyo-chill.jpg",
-      tags: ["午餐", "咖啡", "渋谷"],
-      intro: "渋谷桜丘町——沙發／terrace 嘅輕食 café，適合兩人最後一餐坐低歎。",
+      tags: ["後備", "咖啡", "渋谷", "輕食"],
+      intro: "渋谷桜丘町輕食 café——omakase 訂唔到／想輕食時先用；已唔再係主午餐。",
       tips: "桜丘町 23-18｜每日 08:00–20:00｜無休｜渋谷駅西口徒歩約 5 分｜未訂｜https://whiteglasscoffee.com/",
-      detail: "WHITE GLASS COFFEE 喺渋谷西口桜丘町，有沙發同露台感座位，賣咖啡、輕食同甜品；平日相對週末鬆，啱起飛日前慢慢午餐。",
+      detail: "WHITE GLASS COFFEE 喺渋谷西口桜丘町，有沙發同露台感座位，賣咖啡、輕食同甜品；平日相對週末鬆。",
       history: "桜丘町近年再開發，保留一啲獨立 café 氛圍，同站前十字路口人潮唔同調。",
-      origin: "山手線目黒→渋谷約 6–8 分，午餐後易返新宿拎行李。",
-      stories: "目標 ~13:40 前完午餐，留山手線＋拎袋＋行月台時間趕 14:38 N'EX。",
-      highlights: ["輕食午餐", "08:00–20:00 無休", "近渋谷西口"],
+      origin: "保留作 lunch omakase 後備，唔再當 Day 6 主線。",
+      stories: "若改嚟呢度，山手線目黒→渋谷約 6–8 分；仍要 ~13:40 前完再返新宿拎袋。",
+      highlights: ["輕食後備", "08:00–20:00 無休", "唔再係主午餐"],
       mapsQuery: "WHITE GLASS COFFEE 桜丘町",
       links: [
         { label: "官方網站", url: "https://whiteglasscoffee.com/", kind: "official" },
@@ -911,23 +933,23 @@ window.TRIP = {
     {
       id: 6,
       date: "18/2（四）",
-      title: "新宿／目黒／渋谷 → NRT → 香港",
-      subtitle: "chill 半日，N'EX 14:38 起飛",
+      title: "新宿／目黒／恵比寿 → NRT → 香港",
+      subtitle: "café＋短散步＋lunch omakase，N'EX 14:38",
       hero: "images/tokyo-chill.jpg",
-      summary: "Kadoya CO → MORETHAN 早餐 → Blue Bottle 目黒＋散步 → WHITE GLASS 渋谷午餐 → ~14:00–14:15 拎袋 → ~14:20 離店 → N'EX 14:38（T2 ~15:53／T1 ~15:57）。行李預設酒店暫存（要問）；蔵前已移出主線；成田市僅後備。",
+      summary: "Kadoya CO → MORETHAN 早餐 → Blue Bottle 目黒＋権之助坂／目黒川短行 → SUSHI Ebisu-SHIGETA lunch omakase（目標 12:00–~13:30）→ ~14:05–14:15 拎袋 → ~14:20 離店 → N'EX 14:38。WHITE GLASS 僅後備；蔵前／成田市唔係主線。",
       timeline: [
         { time: "~09:00", text: "Kadoya CO｜行李：預設問酒店暫存（A）；或 locker／前晚寄 NRT", placeId: "kadoya" },
-        { time: "~09:45–10:45", text: "MORETHAN BAKERY 早餐（西新宿／THE KNOT｜步行約 10–15 分）", placeId: "morethan-bakery" },
-        { time: "~10:45–11:10", text: "山手線 新宿 → 目黒（約 12–15 分）", placeId: "bluebottle-meguro" },
-        { time: "~11:10–12:10", text: "Blue Bottle 目黒（今日主 café）＋権之助坂／目黒川短行", placeId: "bluebottle-meguro" },
-        { time: "~12:10–12:25", text: "山手線 目黒 → 渋谷（約 6–8 分）", placeId: "white-glass-shibuya" },
-        { time: "~12:25–13:40", text: "午餐 WHITE GLASS COFFEE（桜丘町｜未訂）", placeId: "white-glass-shibuya" },
-        { time: "~13:40–14:15", text: "返新宿 → Kadoya 拎行李（目標 ~14:00–14:15）", placeId: "kadoya" },
+        { time: "~09:30–10:25", text: "MORETHAN BAKERY 早餐（西新宿／THE KNOT｜步行約 10–15 分）", placeId: "morethan-bakery" },
+        { time: "~10:25–10:50", text: "山手線 新宿 → 目黒（約 12–15 分）", placeId: "bluebottle-meguro" },
+        { time: "~10:50–11:40", text: "Blue Bottle 目黒（主 café）＋権之助坂／目黒川短迴路", placeId: "bluebottle-meguro" },
+        { time: "~11:40–11:55", text: "山手線 目黒 → 恵比寿（約 5–7 分）", placeId: "ebisu-shigeta" },
+        { time: "~12:00–13:30", text: "午餐 SUSHI Ebisu-SHIGETA（11 貫 omakase ¥7,700｜要預約）", placeId: "ebisu-shigeta" },
+        { time: "~13:30–14:15", text: "返新宿 → Kadoya 拎行李（目標 ~14:05–14:15）", placeId: "kadoya" },
         { time: "~14:20", text: "離開 Kadoya → 新宿站 N'EX 月台（步行約 ~15 分）", placeId: "kadoya" },
         { time: "14:38", text: "N'EX 主選：新宿 → T2 ~15:53／T1 ~15:57｜後備 14:08→~15:23/15:27｜❌唔用 15:08 做主選｜出發前再確認時刻", placeId: "nrt" },
         { time: "19:00", text: "UO647 起飛 → 23:25 抵 HKG T1｜bag drop 18:00 硬 deadline", placeId: "nrt" }
       ],
-      transport: "日間：JR 山手線 新宿⇄目黒⇄渋谷。回機場：新宿 N'EX 14:38（主選；現行平日截至 2026 下旬，2027-02 前再確認）／後備 14:08。bag drop 18:00 硬 deadline。行李：A 酒店暫存（要問）／B locker／C 前晚空港宅急便／D 只帶登機。"
+      transport: "日間：JR 山手線 新宿⇄目黒⇄恵比寿。回機場：新宿 N'EX 14:38（主選；現行平日截至 2026 下旬，2027-02 前再確認）／後備 14:08。bag drop 18:00 硬 deadline。行李：A 酒店暫存（要問）／B locker／C 前晚空港宅急便／D 只帶登機。"
     }
 
   ],
@@ -940,7 +962,7 @@ window.TRIP = {
     { id: "hakone-shrine", label: "箱根" },
     { id: "gotemba", label: "御殿場" },
     { id: "kadoya", label: "新宿" },
-    { id: "bluebottle-meguro", label: "目黒／渋谷" },
+    { id: "ebisu-shigeta", label: "目黒／恵比寿" },
     { id: "nrt", label: "NRT" }
   ]
 };
