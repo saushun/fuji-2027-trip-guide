@@ -733,6 +733,28 @@ window.TRIP = {
       ]
     },
     {
+      id: "kamotonegi-nishiguchi",
+      name: "鴨to葱（らーめん鴨to葱）新宿西口店（已鎖定／walk-in）",
+      nameJa: "鴨to葱 新宿西口店",
+      day: 1,
+      lat: 35.69475,
+      lng: 139.6979, // approx 西新宿7-9-12 鈴和ビル 2026-11-02
+      image: "images/shinjuku-west.jpg",
+      tags: ["晚餐", "ラーメン", "つけ麺", "新宿", "鎖定", "walk-in"],
+      intro: "Day 1 已鎖定晚餐。Kadoya CI 後西新宿步行 ~5–10 分；目標 ~21:40–22:30 食完早睡。予約不可／walk-in。",
+      tips: "西新宿 7-9-12 鈴和ビル｜新宿西口すぐ／~180–440m｜每日 10:00–翌04:00｜¥1,000–¥1,999｜カード／電子マネー／QR可｜1F 22 + 2F 14；全席禁煙｜予約不可 03-5937-5886｜唔使訂。",
+      detail: "鴨to葱 新宿西口店係ラーメン／つけ麺（鴨・葱）。Sunny 改做 13/2 晚第一晚晚飯。動線：N'EX → 新宿西口 → Kadoya 先 CI（~21:25–21:35）→ 西新宿步行 ~5–10 分（唔使過三丁目）→ 目標 ~21:40–22:30 食完。2 成人。※一度鎖定たけし，已改鴨to葱。",
+      history: "らーめん鴨to葱系列；新宿西口店約 2026-04-25 開。官方／Tabelog 有營業資訊。",
+      origin: "落地第一晚想食完早睡；酒店西新宿，店同區極近，比過三丁目更啱。",
+      stories: "予約不可——walk-in。開到翌 04:00，~21:40–22:30 完全 OK。",
+      highlights: ["已鎖定／walk-in", "鴨・葱ラーメン", "~5–10 分由 Kadoya", "予約不可"],
+      mapsQuery: "鴨to葱 新宿西口店 西新宿7-9-12",
+      links: [
+        { label: "Tabelog", url: "https://tabelog.com/tokyo/A1304/A130401/13321726/", kind: "ref" },
+        { label: "官方店舗", url: "https://www.kamotonegi.com/shoprisuto/shinjunkunishi/", kind: "official" },
+      ]
+    },
+    {
       id: "sushi-kotobuki",
       name: "すし寿（Sushi Kotobuki｜暫定）",
       nameJa: "すし寿",
@@ -995,13 +1017,15 @@ window.TRIP = {
       title: "香港 → 東京",
       subtitle: "落地新宿，慢慢起步",
       hero: "images/narita.jpg",
-      summary: "下午由香港起飛，傍晚抵成田，入西新宿 Kadoya check-in，附近食晚飯。",
+      summary: "下午由香港起飛，傍晚抵成田 → N'EX 主選 ~19:49→新宿 ~21:18 → 先 Kadoya CI → 鴨to葱 新宿西口店晚飯（已鎖定／walk-in；~21:40–22:30）。",
       timeline: [
         { time: "13:00", text: "HKG T2 起飛 UO646（PNR DBY9RQ）", placeId: null },
-        { time: "18:05", text: "抵 NRT T2 → 入新宿", placeId: "nrt" },
-        { time: "晚", text: "Kadoya Hotel check-in（確認 3925-6530-8839）｜附近食晚飯", placeId: "kadoya" }
+        { time: "18:05", text: "抵 NRT T2 → 入境＋行李", placeId: "nrt" },
+        { time: "~19:49", text: "N'EX 主選 → 新宿 ~21:18（參考；出發前再核對）", placeId: null },
+        { time: "~21:25–21:35", text: "Kadoya Hotel 先 check-in（確認 3925-6530-8839）", placeId: "kadoya" },
+        { time: "~21:40–22:30", text: "晚餐（已鎖定／walk-in）鴨to葱 新宿西口店｜03-5937-5886｜予約不可｜10:00–翌04:00", placeId: "kamotonegi-nishiguchi" }
       ],
-      transport: "機場→新宿：N'EX／京成等（視行李同時間）"
+      transport: "機場→新宿：N'EX 主選（後備 Limousine／Skyliner）。Kadoya→鴨to葱西新宿步行約 5–10 分（唔使過三丁目）。"
     },
     {
       id: 2,
@@ -1009,7 +1033,7 @@ window.TRIP = {
       title: "新宿 → 河口湖",
       subtitle: "取車、五重塔、湖畔同溫泉",
       hero: "images/chureito.jpg",
-      summary: "朝早新宿取車出河口湖：FabCafe 早餐 → 新倉山 → 餺飥午餐 → 食パン → 大石公園 → 纜車 → Mizno → 鰻魚飯 → 花火（待確認）。",
+      summary: "朝早新宿取車出河口湖：FabCafe 早餐 → 新倉山 → 餺飥午餐 → 食パン → 大石公園 → 纜車 → Mizno → 鰻魚飯 → 花火（已確認）。",
       timeline: [
         { time: "08:00", text: "Nissan 新宿駅西口取車（確認 26101305986）→ 中央道 → 富士吉田西桂スマート IC（ETC）", placeId: "nissan" },
         { time: "~09:45", text: "早餐 FabCafe Fuji", placeId: "fabcafe" },
@@ -1020,7 +1044,7 @@ window.TRIP = {
         { time: "14:30", text: "河口湖富士山全景纜車", placeId: "ropeway" },
         { time: "15:45", text: "Mizno Hotel check-in（斜路，雪天小心）", placeId: "mizno" },
         { time: "17:00", text: "晚餐 甲州うなよし（現金／建議訂位）", placeId: "unayoshi" },
-        { time: "~20:00", text: "花火（2027 日期待確認）｜宵夜可 FamilyMart North Kawaguchiko", placeId: null }
+        { time: "~20:00", text: "花火（2027 已確認／Sunny 2026-11-01）｜宵夜可 FamilyMart North Kawaguchiko", placeId: null }
       ],
       transport: "約 99 km、1.5–2 小時。07:00–07:30 前過八王子較順。要 ETC／雪胎。"
     },
@@ -1120,18 +1144,19 @@ window.TRIP = {
   ],
 
   todos: {
-    caption: "狀態以行程 md 為準（2026-11-01 ~23:10）；網站顯示靜態清單。",
+    caption: "狀態以行程 md 為準（2026-11-02 ~22:05）；網站顯示靜態清單。",
     open: [
       { text: "國際車牌（1949 日內瓦公約版本）" },
-      { text: "Airbnb 屋主要求：登記表 + 護照頁（約 15/10/2026 前）", meta: "~15/10/2026｜deadline 或已過，仍按 md 保留" },
       { text: "甲州うなよし 14/2 晚餐訂位（電話 0555-22-7722）" },
       { text: "彩呼亭 15/2 午餐訂位留麵（電話 0555-82-3144）" },
       { text: "17/2 晚餐（暫定／未訂）：すし寿｜西新宿 Queens NS B1F｜おまかせ寿 ≈¥18,150｜等 Sunny 確認已訂｜よしかわ已取代", meta: "暫定／未訂" },
       { text: "18/2 walk-in 提醒：Garden House／Conran／HAIJI／麵屋みかん／可選 Traveler's Factory（通常唔使訂）", meta: "soft" },
-      { text: "箱根町／元箱根／湯本一帶 16/2 午餐（待定）；16/2 晚餐＝雪月花方案內含", meta: "午餐待定" },
-      { text: "確認 2027 河口湖冬季花火日期（未公布）" }
+      { text: "箱根町／元箱根／湯本一帶 16/2 午餐（待定）；16/2 晚餐＝雪月花方案內含", meta: "午餐待定" }
     ],
     done: [
+      { text: "13/2 晚餐：おでん屋たけし → 已改 鴨to葱 新宿西口店（予約不可／walk-in）", meta: "已改" },
+      { text: "Airbnb 屋主要求：登記表 + 護照頁 → 護照已交屋主（Sunny 2026-11-01 確認）", meta: "護照已交" },
+      { text: "確認 2027 河口湖冬季花火日期 → 當 confirmed（Sunny 2026-11-01）｜Day 2 ~20:00", meta: "已確認" },
       { text: "16/2 箱根溫泉酒店 → 已訂季之湯雪月花（Rakuten 21315099251796）", meta: "已訂" },
       { text: "Airbnb 縮短至 15→16 → 已改訂（HM5WBB3CJB｜CI 15/2 15:00、CO 16/2 10:00）", meta: "已改訂" },
       { text: "租車 → 已訂 Nissan｜確認 26101305986｜Kicks e-POWER 4WD｜14/2 08:00→17/2 19:00 新宿西口｜¥58,795", meta: "BOOKED" },
